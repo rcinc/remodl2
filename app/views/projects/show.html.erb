@@ -1,0 +1,347 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Main Photo:</strong>
+  <%= image_tag @project.url1 %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @project.budget %>
+</p>
+
+
+<p>
+  <strong>Created:</strong>
+  <%= @project.date %>
+</p>
+
+<p>
+  <strong>Location city:</strong>
+  <%= @project.location_city %>
+</p>
+
+<p>
+  <strong>Ends:</strong>
+  <span>in </span><%= @project.ends %><span> days</span>
+</p>
+<p>
+  <% if !@project.url2 == nil || false %>
+  <strong>Url2:</strong>
+  <%= @project.url2 %>
+  <% end %>
+</p>
+
+<p>  <% if !@project.url3 == nil || false %>
+  <strong>Url3:</strong>
+  <%= @project.url3 %>
+  <% end %>
+</p>
+
+<p>  <% if !@project.url4 == nil || false %>
+  <strong>Url4:</strong>
+  <%= @project.url4 %>
+    <% end %>
+</p>
+
+
+<p>  <% if !@project.kitchen == nil || false %>
+  <strong>Kitchen:</strong>
+  <%= @project.kitchen %>
+  <% end %>
+</p>
+
+
+<p>  <% if !@project.sqft == nil || false %>
+  <strong>Sqft:</strong>
+  <%= @project.sqft %>
+  <% end %>
+</p>
+
+
+<p>  <% if !@project.number_of_cabinets == nil || false %>
+  <strong>Number of cabinets:</strong>
+  <%= @project.number_of_cabinets %>
+  <% end %>
+</p>
+
+<p> <% if !@project.countertop_style == nil || false %>
+  <strong>Countertop style:</strong>
+  <%= @project.countertop_style %>
+  <% end %>
+</p>
+
+
+<p> <% if !@project.counter_top_length == nil || false %>
+  <strong>Counter top length:</strong>
+  <%= @project.counter_top_length %>
+  <% end %>
+</p>
+
+
+<p> <% if !@project.number_of_outlets == nil || false %>
+  <strong>Number of outlets:</strong>
+  <%= @project.number_of_outlets %>
+  <% end %>
+</p>
+
+<p> <% if !@project.light_fixture_type == nil || false %>
+  <strong>Light fixture type:</strong>
+  <%= @project.light_fixture_type %>
+  <% end %>
+</p>
+
+<p> <% if !@project.floor_sqft == nil || false %>
+  <strong>Floor sqft:</strong>
+  <%= @project.floor_sqft %>
+  <% end %>
+</p>
+
+<p> <% if !@project.floor_type == nil || false %>
+  <strong>Floor type:</strong>
+  <%= @project.floor_type %>
+  <% end %>
+</p>
+
+<p> <% if !@project.bath == nil || false %>
+  <strong>Bath:</strong>
+  <%= @project.bath %>
+  <% end %>
+</p>
+
+<p> <% if !@project.vanity_width == nil || false %>
+  <strong>Vanity width:</strong>
+  <%= @project.vanity_width %>
+  <% end %>
+</p>
+
+<p> <% if !@project.tub_length == nil || false %>
+  <strong>Tub length:</strong>
+  <%= @project.tub_length %>
+  <% end %>
+</p>
+
+<p> <% if !@project.shower_sqft == nil || false %>
+  <strong>Shower sqft:</strong>
+  <%= @project.shower_sqft %>
+  <% end %>
+</p>
+
+<p> <% if !@project.mirror == nil || false %>
+  <strong>Mirror:</strong>
+  <%= @project.mirror %>
+  <% end %>
+</p>
+
+<p> <% if !@project.bath_fan == nil || false %>
+  <strong>Bath fan:</strong>
+  <%= @project.bath_fan %>
+  <% end %>
+</p>
+
+<p> <% if !@project.air_conditioning == nil || false %>
+  <strong>Air conditioning:</strong>
+  <%= @project.air_conditioning %>
+  <% end %>
+</p>
+
+<p> <% if !@project.ac_type == nil || false %>
+  <strong>Ac type:</strong>
+  <%= @project.ac_type %>
+  <% end %>
+</p>
+
+<p> <% if !@project.home_sqft == nil || false %>
+  <strong>Home sqft:</strong>
+  <%= @project.home_sqft %>
+  <% end %>
+</p>
+
+<p> <% if !@project.ac_size == nil || false %>
+  <strong>Ac size:</strong>
+  <%= @project.ac_size %>
+  <% end %>
+</p>
+
+<p> <% if !@project.duct_work == nil || false %>
+  <strong>Duct work:</strong>
+  <%= @project.duct_work %>
+  <% end %>
+</p>
+
+<p> <% if !@project.roof == nil || false %>
+  <strong>Roof:</strong>
+  <%= @project.roof %>
+  <% end %>
+</p>
+
+<p> <% if !@project.exterior_general == nil || false %>
+  <strong>Exterior general:</strong>
+  <%= @project.exterior_general %>
+  <% end %>
+</p>
+
+<p> <% if !@project.more_detail == nil || false %>
+  <strong>More detail:</strong>
+  <%= @project.more_detail %>
+  <% end %>
+</p>
+
+<p> <% if !@project.paint == nil || false %>
+  <strong>Paint:</strong>
+  <%= @project.paint %>
+  <% end %>
+</p>
+
+<p> <% if !@project.floor == nil || false %>
+  <strong>Floor:</strong>
+  <%= @project.floor %>
+  <% end %>
+</p>
+
+<p> <% if !@project.floor_demo == nil || false %>
+  <strong>Floor demo:</strong>
+  <%= @project.floor_demo %>
+  <% end %>
+</p>
+
+
+<p> <% if !@project.pool == nil || false %>
+  <strong>Pool:</strong>
+  <%= @project.pool %>
+</p>
+<% end %>
+
+<p> <% if !@project.drive_way == nil || false %>
+  <strong>Drive way:</strong>
+  <%= @project.drive_way %>
+  <% end %>
+</p>
+
+<p> <% if !@project.length == nil || false %>
+  <strong>Length:</strong>
+  <%= @project.length %>
+  <% end %>
+</p>
+
+<p> <% if !@project.width == nil || false %>
+  <strong>Width:</strong>
+  <%= @project.width %>
+  <% end %>
+</p>
+
+<p> <% if !@project.landscaping == nil || false %>
+  <strong>Landscaping:</strong>
+  <%= @project.landscaping %>
+  <% end %>
+</p>
+
+<p> <% if !@project.fence == nil || false %>
+  <strong>Fence:</strong>
+  <%= @project.fence %>
+  <% end %>
+</p>
+
+<p> <% if !@project.fence_material == nil || false %>
+  <strong>Fence material:</strong>
+  <%= @project.fence_material %>
+  <% end %>
+</p>
+
+<p> <% if !@project.windows == nil || false %>
+  <strong>Windows:</strong>
+  <%= @project.windows %>
+  <% end %>
+</p>
+
+<p> <% if !@project.window_type == nil || false %>
+  <strong>Window type:</strong>
+  <%= @project.window_type %>
+  <% end %>
+</p>
+
+<p> <% if !@project.quantity == nil || false %>
+  <strong>Quantity:</strong>
+  <%= @project.quantity %>
+  <% end %>
+</p>
+
+<p> <% if !@project.electrical == nil || false %>
+  <strong>Electrical:</strong>
+  <%= @project.electrical %>
+  <% end %>
+</p>
+
+<p> <% if !@project.plumbing == nil || false %>
+  <strong>Plumbing:</strong>
+  <%= @project.plumbing %>
+  <% end %>
+</p>
+
+<p> <% if !@project.handy_man == nil || false %>
+  <strong>Handy man:</strong>
+  <%= @project.handy_man %>
+  <% end %>
+</p>
+<br>
+<br>
+  <h3>Current Bids</h3>
+<% @project.bids.each do |bid| %> <p>
+$<%= bid.bid %>
+<% if bid.user == current_user%>
+<%= link_to 'Edit Your Bid', edit_bid_path(bid) %>
+<% end %>
+<br>
+Added on: <%= bid.created_at %>
+</p>
+<% end %>
+<br>
+<br>
+  <h3>Questions/Comments</h3>
+<% @project.comments.each do |comment| %> <p>
+<b>Posted by:</b><br><%=comment.user.email%><br>
+<b>Comment:</b><br><%= comment.body %><br>
+</p>
+<% end %>
+<br>
+<br>
+
+<% if current_user.profile.vendor? && @show_bid_for == true %>
+  <h3>Bid on this Project</h3>
+  <%= form_for [@project, @bid] do |f| %>
+    <div class="field">
+      <%= f.label :bid %><br>
+      <%= f.number_field :bid %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+<% end %>
+
+<br>
+<%= form_for [@project, @comment] do |f| %>
+  <div class="field">
+    <%= f.label :Ask_a_Question_or_Post_a_comment_on_this_project %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+<% if @project.user_id == current_user.try(:id) %>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
+<% end %>

@@ -1,0 +1,75 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+strong.login:hover {
+  color: #ddc367;
+  cursor: pointer;
+}
+
+.signupmaster {
+    margin-top: 2em;
+    font-size: 16px;
+    width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 8px;
+    font-color: white;
+    opacity: 1;
+    float: right;
+    overflow: hidden;
+    position: relative;
+    top: -92px;
+    font-family: 'Open Sans', sans-serif;
+    left: 100px;
+    max-width: 100%;
+}
+
+
+
+.loginmaster {
+  font-size: 16px;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 8px;
+  font-color: white;
+  opacity: 1;
+  float: right;
+  overflow: hidden;
+  position: relative;
+  top: -72px;
+  left: 270px;
+  font-family: 'Open Sans', sans-serif;
+  max-width: 100%;
+}
+
+.logo {
+
+  background-repeat: no-repeat;
+  position: absolute;
+  float: center;
+  overflow: hidden;
+  z-index: -1000;
+  margin-left: 0 auto;
+  margin-top: 3%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+
+}
+
+.homepic {
+  background-image: url("http://static1.squarespace.com/static/526454cee4b077de04039334/t/553fede3e4b0d45561bcb545/1430253028345/");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  margin-left: 0 auto;
+
+}

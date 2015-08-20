@@ -1,0 +1,215 @@
+<head>
+</head>
+
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<ul>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :ends %><br>
+    <%= f.text_field :ends %>
+  </div>
+  <div class="field">
+    <%= f.label :location_city %><br>
+    <%= f.text_field :location_city %>
+  </div>
+  <div class="field">
+    <%= f.label :budget %><br>
+    <%= f.number_field :budget %>
+  </div>
+  <div class="field">
+    <%= f.label :url1 %><br>
+    <%= f.text_field :url1 %>
+  </div>
+  <div class="field">
+    <%= f.label :url2 %><br>
+    <%= f.text_field :url2 %>
+  </div>
+  <div class="field">
+    <%= f.label :url3 %><br>
+    <%= f.text_field :url3 %>
+  </div>
+  <div class="field">
+    <%= f.label :url4 %><br>
+    <%= f.text_field :url4 %>
+  </div>
+  <h4>Please check all that apply to your project</h4>
+
+
+  <div class="kitch">
+    <%= f.label :kitchen %><br>
+    <%= f.check_box :kitchen %>
+  </div>
+  <div class="ac">
+    <%= f.label :air_conditioning %><br>
+    <%= f.check_box :air_conditioning %>
+  </div>
+  <div class="roof">
+    <%= f.label :roof %><br>
+    <%= f.check_box :roof %>
+  </div>
+  <div class="extg">
+    <%= f.label :exterior_general %><br>
+    <%= f.check_box :exterior_general %>
+  </div>
+  <div class="paint">
+    <%= f.label :paint %><br>
+    <%= f.check_box :paint %>
+  </div>
+  <div class="floor">
+    <%= f.label :floor %><br>
+    <%= f.check_box :floor %>
+  </div>
+  <div class="bath">
+    <%= f.label :bath %><br>
+    <%= f.check_box :bath %>
+  </div>
+  <div class="pool">
+    <%= f.label :pool %><br>
+    <%= f.check_box :pool %>
+  </div>
+  <div class="drive">
+    <%= f.label :drive_way %><br>
+    <%= f.check_box :drive_way %>
+  </div>
+  <div class="land">
+    <%= f.label :landscaping %><br>
+    <%= f.check_box :landscaping %>
+  </div>
+  <div class="fence">
+    <%= f.label :fence %><br>
+    <%= f.check_box :fence %>
+  </div>
+  <div class="win">
+    <%= f.label :windows %><br>
+    <%= f.check_box :windows %>
+  </div>
+  <div class="elec">
+    <%= f.label :electrical %><br>
+    <%= f.check_box :electrical %>
+  </div>
+  <div class="plumb">
+    <%= f.label :plumbing %><br>
+    <%= f.check_box :plumbing %>
+  </div>
+  <div class="handy">
+    <%= f.label :handy_man %><br>
+    <%= f.check_box :handy_man %>
+  </div>
+</ul>
+
+
+  <div id="sqft" style="display:none;">
+    <%= f.label :room_sqft %><br>
+    <%= f.text_field :sqft %>
+  </div>
+  <div id="kit" style="display:none;">
+    <%= f.label :number_of_cabinets %><br>
+    <%= f.number_field :number_of_cabinets %>
+    <br>
+    <%= f.label :countertop_style %><br>
+    <%= f.text_field :countertop_style %>
+    <br>
+    <%= f.label :counter_top_length %><br>
+    <%= f.number_field :counter_top_length %>
+  </div>
+  <div id="outlets" style="display:none;">
+    <%= f.label :number_of_outlets %><br>
+    <%= f.number_field :number_of_outlets %>
+  </div>
+    <div id="light" style="display:none;">
+    <%= f.label :light_fixture_type %><br>
+    <%= f.text_field :light_fixture_type %>
+  </div>
+  <div id="floor" style="display:none;">
+    <%= f.label :floor_sqft %><br>
+    <%= f.number_field :floor_sqft %>
+    <br>
+    <%= f.label :floor_type %><br>
+    <%= f.text_field :floor_type %>
+    <br>
+    <%= f.label :floor_demo? %><br>
+    <%= f.text_field :floor_demo %>
+  </div>
+  <div id="bath" style="display:none;">
+    <%= f.label :vanity_width %><br>
+    <%= f.number_field :vanity_width %>
+    <br>
+    <%= f.label :tub_length %><br>
+    <%= f.number_field :tub_length %>
+    <br>
+    <%= f.label :shower_sqft %><br>
+    <%= f.number_field :shower_sqft %>
+    <br>
+    <%= f.label :mirror %><br>
+    <%= f.text_field :mirror %>
+    <br>
+    <%= f.label :bath_fan %><br>
+    <%= f.text_field :bath_fan %>
+  </div>
+  <div id="ac" style="display:none;">
+    <%= f.label :ac_type %><br>
+    <%= f.text_field :ac_type %>
+    <br>
+    <%= f.label :ac_size %><br>
+    <%= f.number_field :ac_size %>
+    <br>
+    <%= f.label :duct_work %><br>
+    <%= f.text_field :duct_work %>
+  </div>
+  <div id="hsize" style="display:none;">
+    <%= f.label :home_sqft %><br>
+    <%= f.number_field :home_sqft %>
+  </div>
+
+  <div id="more" style="display:none;">
+    <%= f.label :more_detail %><br>
+    <%= f.text_area :more_detail %>
+  </div>
+
+  <div id="length" style="display:none;">
+    <%= f.label :length %><br>
+    <%= f.number_field :length %>
+  </div>
+  <div id="width" style="display:none;">
+    <%= f.label :width %><br>
+    <%= f.number_field :width %>
+  </div>
+  <div id="fence" style="display:none;">
+    <%= f.label :fence_material %><br>
+    <%= f.text_field :fence_material %>
+  </div>
+  <div id="window" style="display:none;">
+    <%= f.label :window_type %><br>
+    <%= f.text_field :window_type %>
+  </div>
+  <div id="qty" style="display:none;">
+    <%= f.label :quantity %><br>
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

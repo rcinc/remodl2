@@ -1,0 +1,11 @@
+<h1> Search Results </h1>
+
+<br>
+</br>
+<%  @results.each do |result| %>
+<%= image_tag result.url1 %><br>
+<h3>Project Title</title><br>
+<%=link_to result.title.capitalize, result %>
+<h3>Project description</h3>
+<%= result.description.capitalize%><br>
+<% end %>

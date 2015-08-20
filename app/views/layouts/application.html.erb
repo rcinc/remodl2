@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+
+   <meta charset='utf-8'>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="styles.css">
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+   <script src="script.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+
+<div id='cssmenu'>
+<ul>
+   <li><%= link_to 'Home', home_index_path %></li>
+   <li><%= link_to 'Projects', projects_path %></li>
+   <% if user_signed_in? %>
+   <li><%= link_to 'Profile', profiles_path %></li>
+   <% end %>
+   <li><%= link_to 'Activity', activities_path %></li>
+   <li><%= link_to 'About', about_index_path %></li>
+   <li>
+      <% if current_user.nil? %>
+        <%= link_to 'Sign Up', new_user_registration_path %>
+      <% else %>
+      <% end %>
+    </li>
+    <li>
+      <% if current_user.nil? %>
+        <%= link_to 'Log In', new_user_session_path %>
+      <% else %>
+        <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+      <% end %>
+  </li>
+   <li> <% if user_signed_in? %>
+   <strong class="login"> <%= current_user.try(:email) %></strong>
+   <% end %>
+</li>
+</ul>
+</div>
+
+
+</head>
+<body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <div class="search"><%= form_tag search_path do %>
+    <%= search_field_tag :term, 'site search' %>
+    <%= submit_tag "Go!" %>
+  <% end %>
+  </div>
+
+<%= yield %>
+
+</body>
+</html>

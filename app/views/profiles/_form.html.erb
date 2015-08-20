@@ -1,0 +1,64 @@
+<%= form_for(@profile) do |f| %>
+  <% if @profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% @profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div> -->
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.text_field :picture %>
+  </div>
+  <div class="field">
+    <%= f.label :bio %><br>
+    <%= f.text_area :bio %>
+  </div>
+  <div class="vendor">
+    <%= f.label :vendor? %><br>
+    <%= f.check_box :vendor %>
+  </div>
+  <div id="company" style="display:none;">
+    <%= f.label :company %><br>
+    <%= f.text_area :company  %>
+  </div>
+  <div id="address" style="display:none;">
+      <%= f.label :address %><br>
+      <%= f.text_area :address %>
+  </div>
+  <div id="phone" style="display:none;">
+    <%= f.label :phone %><br>
+    <%= f.text_area :phone %>
+  </div>
+  <div id="lict" style="display:none;">
+    <%= f.label :license_type %><br>
+    <%= f.text_area :license_type %>
+  </div>
+  <div id="licn" style="display:none;">
+    <%= f.label :license_number %><br>
+    <%= f.text_area :license_number %>
+  </div>
+
+  <br>
+  <br>
+  <div class="field">
+    <%= f.label :Deactivate_Profile? %>
+    <%= f.check_box :deactivate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

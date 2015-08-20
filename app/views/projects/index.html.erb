@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+<body class="projectbody">
+<div class="projecthead">
+<h1>Projects</h1>
+</div>
+
+<div class="projecttable">
+<table>
+  <thead>
+    <tr>
+      <th class="protitle">Title</th>
+      <th class="prodes">Description</th>
+      <th class="prodate">Date</th>
+      <th class="propic">Main pic</th>
+
+
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td class="propic"><%= image_tag project.url1%></td>
+        <td class="protitle"><%= project.title %></td>
+        <td class="prodes"><%= project.description %></td>
+        <td class="prodate"><%= project.date %></td>
+        <% if project.bids.last == nil %>
+        <td class="no bid>"<%= "No Bid" %></td>
+        <% else %>
+          <td class="latestbid"> <b>lastest bid</b><br>$ <%= project.bids.last.bid %></td>
+          <% end %>
+        <td><%= link_to 'Show', project %></td>
+      <% if current_user.try(:id) == project.user_id %>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+      <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+<% @users.each do |user| %>
+<% if user.id == current_user.try(:id) && user.profile != nil && user.profile.vendor == false %>
+<%= link_to 'New Project', new_project_path %>
+<% end %>
+<% end %>
+<body>

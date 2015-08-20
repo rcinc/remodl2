@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+  <!-- <div class="profile-stats">
+    <ul>
+      <li>  <span>Bids</span></li>
+      <li>  <span>Projects</span></li>
+      <li>  <span>Company</span></li>
+    </ul>
+    <a href="javascript:void(0);" class="follow">
+      Connect
+    </a>
+  </div>
+  <h1> <%= @profile.name %> <small> <%= current_user.try(:email)%></small></h1> -->
+
+<% if @profile.deactivate? %>
+<Span> Your Account has been deactivated <span><br><br>
+<% else %>
+<h1 class = "profilepic">
+  <%= image_tag @profile.picture %></td>
+</h1>
+<h1 class = "profilename">
+  <!-- <strong>Name:</strong> -->
+  <%= @profile.name %>
+</h1>
+<div class = "profileinfo">
+<h2 class = "profilebio">
+  <strong>Bio:</strong>
+  <%= @profile.bio %>
+</h2>
+
+<h2 class = "profilevendor">
+  <strong>Vendor:</strong>
+  <%= @profile.vendor %>
+</h2>
+
+<% if @profile.vendor? %>
+
+<h2 class = "profilevendor">
+  <strong>Company:</strong>
+  <%= @profile.company %>
+</h2>
+
+<h2 class = "profilevendor">
+  <strong>Address:</strong>
+  <%= @profile.address %>
+</h2>
+<h2 class = "profilevendor">
+  <strong>Phone:</strong>
+  <%= @profile.phone %>
+</h2>
+<h2 class = "profilevendor">
+  <strong>License Type:</strong>
+  <%= @profile.license_type %>
+</h2>
+<h2 class = "profilevendor">
+  <strong>License Number:</strong>
+  <%= @profile.license_number %>
+</h2>
+
+<% end %>
+
+
+<% unless @profile.vendor == false %>
+<h2 class = "mybids">My Bids</h2>
+<% @bids.each do |bid| %>
+<% if bid.user == current_user %>
+<%= link_to bid.project.title, project_path(bid.project_id) %> $<%= link_to bid.bid, project_path(bid.project_id) %><br><br>
+<% end %>
+<% end %>
+<% end %>
+<br>
+<br>
+
+<% end %>
+</div>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
