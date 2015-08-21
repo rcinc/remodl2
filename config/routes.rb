@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get 'home/index'
 
   resources :activities
-  resources :profiles
+  resources :profiles do
+    member do
+    post 'upvote'
+    end
+  end
 
   resources :projects, shallow: true do
     resources :bids
