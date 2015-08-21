@@ -1,3 +1,37 @@
 // Place all the styles related to the activities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.activity {
+  max-width: 100%;
+  margin: -0.5%;
+  margin-left: 5%;
+  width: 90%;
+  height: auto;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background:rgba(221,195,103,0.7);
+  -webkit-box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
+  -moz-box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
+  box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
+  padding: 0.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.activity:hover {
+  width: 93.5%;
+  margin-left: 2.6%;
+  box-shadow: inset 1px 0px 5px 0px #ABABAB;
+  -webkit-box-shadow: inset 1px 0px 5px 0px #ABABAB;
+  -moz-box-shadow: inset 1px 0px 5px 0px #ABABAB;
+  -o-box-shadow: inset 1px 0px 5px 0px #ABABAB;
+
+}
+
+.activities {
+  color: #1C4F74;
+  text-align: center;
+  // text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 60px;
+}
