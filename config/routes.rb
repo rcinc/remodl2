@@ -10,8 +10,6 @@ Rails.application.routes.draw do
   resources :profiles do
     member do
     post 'upvote'
-    end
-    member do
     post 'downvote'
     end
   end
