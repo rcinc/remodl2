@@ -182,3 +182,7 @@ body img {
   height:auto;
   margin-left: 0 auto;
 }
+
+html {
+  background: rgb(248,253,255);
+}
