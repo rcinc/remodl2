@@ -318,7 +318,7 @@ Added on: <%= bid.created_at %>
 <br>
 <br>
 
-<% if current_user && current_user.profile? && current_user.profile.vendor? && @show_bid_form  %>
+<% if current_user && current_user.profile && current_user.profile.vendor? && @show_bid_form  %>
   <h3>Bid on this Project</h3>
   <%= form_for [@project, @bid] do |f| %>
     <div class="field">
@@ -332,6 +332,7 @@ Added on: <%= bid.created_at %>
 <% end %>
 
 <br>
+<% if current_user %>
 <%= form_for [@project, @comment] do |f| %>
   <div class="field">
     <%= f.label :Ask_a_Question_or_Post_a_comment_on_this_project %><br>
@@ -340,6 +341,7 @@ Added on: <%= bid.created_at %>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <% end %>
   <% end %>
 <% if @project.user_id == current_user.try(:id) %>
 <%= link_to 'Edit', edit_project_path(@project) %> |

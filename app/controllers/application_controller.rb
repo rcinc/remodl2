@@ -6,5 +6,7 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:project) << :user_id
+    devise_parameter_sanitizer.for(:sign_up) << :name
+
   end
 end
