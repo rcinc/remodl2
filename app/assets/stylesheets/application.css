@@ -25,6 +25,8 @@ body img {
   margin-top: 10%;
 }
 
+
+
  @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 #cssmenu {
   background: rgba( 60, 160, 250, 1);
@@ -37,6 +39,9 @@ body img {
   line-height: 1;
   display: block;
   zoom: 1;
+  -webkit-box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
+  -moz-box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
+  box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
 }
 #cssmenu ul:after {
   content: " ";
@@ -98,6 +103,7 @@ body img {
 }
 #cssmenu ul li a:hover {
   color: #ddc367;
+  font-size: 15px;
 }
 #cssmenu ul li a:hover:before {
   width: 100%;
@@ -155,7 +161,7 @@ body img {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-bottom: 1px solid #ddc367;;
+    border-bottom: 1px solid #ddc367;
   }
   #cssmenu ul li.last > a,
   #cssmenu ul li:last-child > a {
@@ -184,5 +190,5 @@ body img {
 }
 
 html {
-  background: rgb(248,253,255);
+  background: rgb(250,254,255);
 }
