@@ -1,7 +1,7 @@
-<h1>Activities#index</h1>
+<h1 class="activities">Activities</h1>
 
 <% @activities.each do |activity| %>
-  <div class="activity">
+  <div class="activity" style="margin-top: 10px;">
     <%= link_to activity.owner.try(:email), profiles_path(activity.owner_id) %>
     <%= render_activity activity %>
   </div>

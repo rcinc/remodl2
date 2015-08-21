@@ -3,10 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
+ // strong.login {
+ //   left: 10px;
+ // }
 strong.login:hover {
   color: #ddc367;
-  cursor: pointer;
+  // cursor: pointer;
+}
+
+input#term {
+  float: right;
+  position: relative;
+  overflow: hidden;
+
 }
 
 .signupmaster {
@@ -46,6 +55,11 @@ strong.login:hover {
   max-width: 100%;
 }
 
+.login {
+  position: relative;
+  right: 20
+}
+
 .logo {
 
   background-repeat: no-repeat;
@@ -62,7 +76,6 @@ strong.login:hover {
 }
 
 .homepic {
-  background-image: url("http://static1.squarespace.com/static/526454cee4b077de04039334/t/553fede3e4b0d45561bcb545/1430253028345/");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 0;
@@ -72,4 +85,12 @@ strong.login:hover {
   height:auto;
   margin-left: 0 auto;
 
+}
+
+.remodl {
+  -webkit-marquee-direction: right;
+  -webkit-marquee-repetition: infinite;
+  -webkit-marquee-style: scroll;
+  -webkit-marquee-speed: normal;
+  overflow-x: -webkit-marquee;
 }
