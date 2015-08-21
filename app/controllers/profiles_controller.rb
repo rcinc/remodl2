@@ -66,6 +66,11 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def upvote
+    @profile = Profile.find(params[:id])
+    @profile.votes.create
+    redirect_to(profiles_path)
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
