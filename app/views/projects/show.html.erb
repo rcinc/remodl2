@@ -318,7 +318,7 @@ Added on: <%= bid.created_at %>
 <br>
 <br>
 
-<% if current_user.profile.vendor? && @show_bid_for == true %>
+<% if current_user && current_user.profile? && current_user.profile.vendor? && @show_bid_form  %>
   <h3>Bid on this Project</h3>
   <%= form_for [@project, @bid] do |f| %>
     <div class="field">
