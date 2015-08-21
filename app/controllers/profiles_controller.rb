@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_this_user, :except => [:new, :upvote, :create, :show, :index]
+  before_action :authenticate_this_user, :except => [:new, :upvote, :downvote, :create, :show, :index]
 
   # GET /profiles
   # GET /profiles.json
