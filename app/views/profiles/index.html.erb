@@ -22,8 +22,11 @@
                           id: "HomeImage",
                           class: "profilepic" %></td>
         <td><%= profile.bio %></td>
-        <td><%= pluralize(profile.votes.count, "vote") %></td>
-        <td><%= button_to '+1', upvote_profile_path(profile), method: :post %></td>
+        <%= pluralize((playlist.votes.count-playlist.downvotes.count), "vote") %>
+        <div class="voters">
+        <%= button_to '/\\', upvote_playlist_path(playlist), method: :post %>
+        <%= button_to '\\/', downvote_playlist_path(playlist), method: :post %>
+        </div>
         <td><%= link_to 'Show', profile %></td>
         <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
       </tr>
