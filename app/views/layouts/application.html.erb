@@ -38,7 +38,7 @@
       <% end %>
   </li>
    <li> <% if user_signed_in? %>
-   <strong class="login"> <%= current_user.try(:email) %></strong>
+   <strong class="login">Hi <%= current_user.email %></strong>
    <% end %>
 </li>
 </ul>
