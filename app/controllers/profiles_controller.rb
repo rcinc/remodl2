@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_this_user, :except => [:new, :create, :show, :index]
+  before_action :authenticate_this_user, :except => [:new, :upvote, :downvote, :create, :show, :index]
 
   # GET /profiles
   # GET /profiles.json
@@ -66,6 +66,17 @@ class ProfilesController < ApplicationController
     end
   end
 
+  def upvote
+    @profile = Profile.find(params[:id])
+    @profile.votes.create
+    redirect_to(profiles_path)
+  end
+
+  def downvote
+    @profile = Profile.find(params[:id])
+    @profile.downvotes.create
+    redirect_to(profiles_path)
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_profile
