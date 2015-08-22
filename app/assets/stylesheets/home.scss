@@ -2,6 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.hometext {
+  color: grey;
+  font-size: 50px;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 5%;
+  text-shadow: 1px 1px 1px rgba(200,200,200,0.7)
+
+}
+
+.title {
+  color: rgba(00, 00, 00, 0.8);;
+  font-size: 100px;
+  max-width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 10%;
+  text-shadow: 1px 1px 1px rgba(200,200,200,0.7)
+
+}
+
 
  // strong.login {
  //   left: 10px;
@@ -11,12 +33,13 @@ strong.login:hover {
   // cursor: pointer;
 }
 
-input#term {
-  float: right;
-  position: relative;
-  overflow: hidden;
-
-}
+// input {
+//   float: right;
+//   position: relative;
+//   overflow: hidden;
+//   right: 4%;
+//   z-index: 10000;
+// }
 
 .signupmaster {
     margin-top: 2em;
@@ -36,7 +59,9 @@ input#term {
     max-width: 100%;
 }
 
-
+li .homeremodl {
+  font-size: 17px;
+}
 
 .loginmaster {
   font-size: 16px;
@@ -87,6 +112,166 @@ input#term {
 
 }
 
-.remodl {
-  
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pic-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow:hidden;
+}
+
+
+
+figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity:0;
+  /*animation*/
+
+  float: left;
+  overflow: hidden;
+  animation: slideShow 24s linear infinite 0s;
+  -o-animation: slideShow 24s linear infinite 0s;
+  -moz-animation: slideShow 24s linear infinite 0s;
+  -webkit-animation: slideShow 24s linear infinite 0s;
+  z-index: -10000;
+}
+
+.pic-1 {
+  opacity: 1;
+  background: url("http://cdn.home-designing.com/wp-content/uploads/2009/07/living-room-interior-design.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-2 {
+  animation-delay: 6s;
+  -o-animation-delay: 6s;
+  -moz--animation-delay: 6s;
+  -webkit-animation-delay: 6s;
+  background: url("http://morviola.com/wp-content/uploads/2015/08/luxury-homes-design.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-3 {
+  animation-delay: 12s;
+  -o-animation-delay: 12s;
+  -moz--animation-delay: 12s;
+  -webkit-animation-delay: 12s;
+  background: url("http://thehomepicz.com/wp-content/uploads/2013/05/Modern-wooden-house-interior-design.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.pic-4 {
+  animation-delay: 18s;
+  -o-animation-delay: 18s;
+  -moz--animation-delay: 18s;
+  -webkit-animation-delay: 18s;
+  background: url("http://designplans.biz/wp-content/uploads/of-luxury-modern-home-design-luxury-modern-home-white-architecture-20140625004513-53a9b929f2f3e.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* keyframes*/
+
+@keyframes slideShow {
+  0% {
+    opacity: 0;
+    transform:scale(1);
+    -ms-transform:scale(1);
+  }
+  4% {
+    opacity: 1
+  }
+  24% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 0;
+    transform:scale(1.1);
+    -ms-transform:scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform:scale(1);
+    -ms-transformm:scale(1);
+  }
+ }
+
+@-o-keyframes slideShow {
+   0% {
+    opacity: 0;
+    -o-transform:scale(1);
+  }
+  4% {
+    opacity: 1
+  }
+  24% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 0;
+    -o-transform:scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    -o-transformm:scale(1);
+  }
+}
+
+@-moz-keyframes slideShow {
+   0% {
+    opacity: 0;
+    -moz-transform:scale(1);
+  }
+  4% {
+    opacity: 1
+  }
+  24% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 0;
+    -moz-transform:scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    -moz-transformm:scale(1);
+  }
+}
+
+@-webkit-keyframes slideShow {
+  0% {
+    opacity: 0;
+    -webkit-transform:scale(1);
+  }
+  4% {
+    opacity: 1
+  }
+  24% {
+    opacity: 1;
+  }
+  28% {
+    opacity: 0;
+    -webkit-transform:scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transformm:scale(1);
+  }
 }

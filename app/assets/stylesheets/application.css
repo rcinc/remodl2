@@ -14,23 +14,17 @@
  *= require_self
  */
 
-body img {
-  background-image: url("http://i946.photobucket.com/albums/ad303/pkellz6/souk1_zpsvscrkkw8.png");
-  background-repeat: no-repeat;
-  position: absolute;
-  float: center;
-  overflow: hidden;
-  z-index: -1000;
-  margin-left: 35%;
-  margin-top: 10%;
-}
 
 
+ html {
+   background: rgb(225,225,225);
+ }
 
  @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
 #cssmenu {
-  background: rgba( 60, 160, 250, 1);
+  background: rgba(130,130,130,0.2);
   max-width: 100%;
+  overflow: hidden;
 }
 #cssmenu ul {
   list-style: none;
@@ -177,18 +171,23 @@ body img {
 
  div img {
     width:auto;
-    max-width:20%;
+    max-width:30%;
     height:auto;
     margin-left: 0 auto;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
 
+img {
+   width: 20% auto;
+   max-width: 20%;
+   height:auto;
+   margin-left: 0 auto;
+}
 .profilepic {
   width:auto;
   max-width:20%;
   height:auto;
   margin-left: 0 auto;
-}
-
-html {
-  background: rgb(250,254,255);
 }

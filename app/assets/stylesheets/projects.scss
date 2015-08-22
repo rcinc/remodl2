@@ -1,110 +1,45 @@
-// Place all the styles related to the Projects controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-
-.projectbody {
-  //  background-color: rgba(255,255,255,1);
-   background-size: cover;
-   background-repeat: no-repeat;
-   margin: 0;
-   padding: 0;
-   width:auto;
-   max-width:100%;
-   height:auto;
-   margin-left: 0 auto;
-}
-
-.projecttable {
+.projects {
   max-width: 100%;
-  margin: 10px;
+  margin: -0.5%;
   margin-left: 5%;
   width: 90%;
   height: auto;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  background:rgba(219,217,219,0.4);
-  -webkit-box-shadow: #B3B3B3 2px 2px 2px 2px;
-  -moz-box-shadow: #B3B3B3 2px 2px 2px 2px;
-  box-shadow: #B3B3B3 2px 2px 2px 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background:rgba(221,195,103,0.7);
+  -webkit-box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
+  -moz-box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
+  box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
+  // padding: 0.5%;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.projecttable:hover {
-  background-color: rgba(180,180,180,.7);
-  cursor: pointer;
-  box-shadow: 3.5px 3.5px 3.5px 3.5px;
+.projects:hover {
+  width: 93.5%;
+  margin-left: 2.6%;
+  box-shadow: inset 1px 0px 5px 0px #ABABAB;
+  -webkit-box-shadow: inset 1px 0px 5px 0px #ABABAB;
+  -moz-box-shadow: inset 1px 0px 5px 0px #ABABAB;
+  -o-box-shadow: inset 1px 0px 5px 0px #ABABAB;
+  // padding: 1%;
+
 }
 
-th.protitle {
-  font-size: 30px;
-  color: black;
-  width:auto;
-  max-width:100%;
-  height:auto;
-  margin-left: 10px auto;
+// .protitle {
+//   margin-left: 40%;
+// }
+
+.projects li  {
+  display: inline;
+  text-decoration: none;
+}
+
+ul.protitle {
+  display: inline;
   position: relative;
-}
-
-.protitle {
-  color: black;
-  width:auto;
-  max-width:100%;
-  height:auto;
-  margin-left: 0 auto;
-  position: relative;
-}
-
-th.prodes {
-  font-size: 30px;
-  width:auto;
-  max-width:100%;
-  height:auto;
-  margin-left: 0 auto;
-  position: relative;
-}
-.prodes {
-  width:auto;
-  max-width:100%;
-  height:auto;
-  margin-left: 0 auto;
-  position: relative;
-}
-
-th.propic {
-  font-size: 30px;
-  width:auto;
-  max-width: 100%;
-  height:auto;
-  margin-left: 0 auto;
-  position: relative;
-}
-
-.propic {
-  width: 100% auto;
-  max-width: 100%;
-  height:auto;
-  margin-left: 0 auto;
-  position: relative;
-}
-
-th.prodate {
-
-  width:auto;
-  max-width:100%;
-  height:auto;
-  margin-left: 0 auto;
-  position: relative;
-}
-
-.prodate {
-  width:auto;
-  max-width:100%;
-  height:auto;
-  margin-left: 0 auto;
-  position: relative;
-}
-
-.projecthead {
-  text-align: center;
+  margin-bottom: 10%
+  // left: 10%;
+  // overflow: hidden;
+  // margin-left: 10%;
 }

@@ -1,44 +1,31 @@
 <p id="notice"><%= notice %></p>
 <body class="projectbody">
 <div class="projecthead">
-<h1>Projects</h1>
+<h1 class="projectstitle">Projects</h1>
 </div>
 
-<div class="projecttable" style="margin-top: 10px;">
-<table>
-  <thead>
-    <tr>
-      <th class="protitle">Title</th>
-      <th class="prodes">Description</th>
-      <th class="prodate">Date</th>
-      <th class="propic">Main pic</th>
 
-
-
-    </tr>
-  </thead>
-
-
-  <tbody>
+  <body>
     <% @projects.each do |project| %>
-      <tr>
-        <td class="propic"><%= image_tag project.url1%></td>
-        <td class="protitle"><%= project.title %></td>
-        <td class="prodes"><%= project.description %></td>
-        <td class="prodate"><%= project.date %></td>
+      <div class="projects" style="margin-top: 10px;">
+        <li class="propic"><%= image_tag project.url1%></li>
+        <ul class="projectsul">
+        <li class="protitle"><%= project.title %></li>
+        <li class="protitle"><%= project.description %></li>
+        <li class="protitle"><%= project.date %></li>
         <% if project.bids.last == nil %>
-        <td class="no bid>"<%= "No Bid" %></td>
+        <li class="protitle"><%= "No Bid" %></td>
         <% else %>
-          <td class="latestbid"> <b>lastest bid</b><br>$ <%= project.bids.last.bid %></td>
+          <li class="protitle"> <b>lastest bid</b><br>$ <%= project.bids.last.bid %></li>
           <% end %>
-        <td><%= link_to 'Show', project %></td>
+        <li class="protitle"><%= link_to 'Show', project %></li>
       <% if current_user.try(:id) == project.user_id %>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <li class="protitle"><%= link_to 'Edit', edit_project_path(project) %></li>
       <% end %>
-      </tr>
+    </ul>
+    </div>
     <% end %>
-  </tbody>
-</table>
+  </body>
 </div>
 
 <br>
