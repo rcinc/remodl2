@@ -1,4 +1,4 @@
-.projects {
+.container {
   max-width: 100%;
   margin: -0.5%;
   margin-left: 5%;
@@ -7,7 +7,7 @@
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
-  background:rgba(221,195,103,0.7);
+  background:rgba(245,245,255,0.7);
   -webkit-box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
   -moz-box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
   box-shadow: #B3B3B3 0.8px 0.8px 0.8px 0.8px;
@@ -15,7 +15,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.projects:hover {
+.container:hover {
   width: 93.5%;
   margin-left: 2.6%;
   box-shadow: inset 1px 0px 5px 0px #ABABAB;
@@ -30,15 +30,43 @@
 //   margin-left: 40%;
 // }
 
+ul.projectsul {
+  text-align: right;
+  margin-right: 3%;
+  position: relative;
+  margin-bottom: 20%;
+  // down: 20%;
+}
+
+ul.projectsul li {
+
+}
+
 .projects li  {
   display: inline;
   text-decoration: none;
 }
 
-ul.protitle {
-  display: inline;
+// li.protitle {
+//   display: inline-block;
+//   position: relative;
+//   // margin-bottom: 10%;
+//   // margin: 2;
+//   text-align: center;
+//   overflow: hidden;
+//   // left: 10%;
+//   // overflow: hidden;
+//   margin-left: 10%;
+// }
+
+p.protitle {
+  display: inline-block;
   position: relative;
-  margin-bottom: 10%
+  // margin-bottom: 10%;
+  // margin: 2;
+  text-align: right;
+  overflow: hidden;
+  font-size: 4vw;
   // left: 10%;
   // overflow: hidden;
   // margin-left: 10%;
