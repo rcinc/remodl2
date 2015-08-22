@@ -205,6 +205,7 @@ img {
 }
 
 .list p span {
+  float: right;
   text-align: center;
 }
 
