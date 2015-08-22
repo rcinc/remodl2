@@ -1,32 +1,68 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<form>
+  <div class="search"><%= form_tag search_path do %>
+    <%= search_field_tag :term, 'site search' %>
+    <%= submit_tag "Go!" %>
+  <% end %>
+  </div>
+</form>
 <p id="notice"><%= notice %></p>
 <body class="projectbody">
 <div class="projecthead">
-<h1 class="projectstitle">Projects</h1>
+<h1 class="projectstitle"><u>Active Projects</u></h1><br><br><br>
 </div>
 
 
   <body>
+    <div class="list">
+
     <% @projects.each do |project| %>
-      <div class="projects" style="margin-top: 10px;">
-        <li class="propic"><%= image_tag project.url1%></li>
-        <ul class="projectsul">
-        <li class="protitle"><%= project.title %></li>
-        <li class="protitle"><%= project.description %></li>
-        <li class="protitle"><%= project.date %></li>
+    <p>
+      <img class="prodimg"><%= image_tag project.url1%></img>
+        <span><%= link_to project.title, project %></span><br>
+        <span><%= project.description %></span><br>
+        <span><%= project.created_at.strftime("%B %d, %Y") %></span><br>
         <% if project.bids.last == nil %>
-        <li class="protitle"><%= "No Bid" %></td>
+        <span><b><%= "No Bids Yet" %></b></span><br>
         <% else %>
-          <li class="protitle"> <b>lastest bid</b><br>$ <%= project.bids.last.bid %></li>
+          <span><b>lastest bid</b><br>$ <%= project.bids.last.bid %></span><br>
           <% end %>
-        <li class="protitle"><%= link_to 'Show', project %></li>
+
       <% if current_user.try(:id) == project.user_id %>
-        <li class="protitle"><%= link_to 'Edit', edit_project_path(project) %></li>
+      <span><%= link_to 'Edit', edit_project_path(project) %></span><br>
+
       <% end %>
-    </ul>
-    </div>
     <% end %>
+
+    </p>
+  </div>
   </body>
-</div>
+
 
 <br>
 <% @users.each do |user| %>
