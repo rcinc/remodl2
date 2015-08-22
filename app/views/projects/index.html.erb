@@ -1,29 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <form>
   <div class="search"><%= form_tag search_path do %>
     <%= search_field_tag :term, 'site search' %>
@@ -37,6 +12,7 @@
 <h1 class="projectstitle"><u>Active Projects</u></h1><br><br><br>
 </div>
 
+<div class="container">
 
   <body>
     <div class="list">
@@ -57,12 +33,17 @@
       <span><%= link_to 'Edit', edit_project_path(project) %></span><br>
 
       <% end %>
+
+    </ul>
+  </div>
     <% end %>
 
     </p>
   </div>
   </body>
 
+</div>
+</div>
 
 <br>
 <% @users.each do |user| %>

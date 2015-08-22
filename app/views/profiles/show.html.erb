@@ -1,26 +1,66 @@
 
+
+
 <p id="notice"><%= notice %></p>
-  <!-- <div class="profile-stats">
-    <ul>
-      <li>  <span>Bids</span></li>
-      <li>  <span>Projects</span></li>
-      <li>  <span>Company</span></li>
-    </ul>
-    <a href="javascript:void(0);" class="follow">
-      Connect
-    </a>
+<!-- <div class="header-container">
+<div class="header wrapper"><h1>Dashboard</h1></div> -->
+
+
+
+
+
+  <div class="block green">
+    <div class="heading">
+      Info
+    </div>
+    <div class="num">
+      <p class = "profilename">
+      <%= @profile.name %>
+      </p>
+      <p>
+        <%= @profile.bio %>
+      </p>
+    </div>
   </div>
-  <h1> <%= @profile.name %> <small> <%= current_user.try(:email)%></small></h1> -->
+  <div class="block orange">
+    <div class="heading">
+      Projects
+    </div>
+    <div class="num">
+      <% current_user.projects.each do |project| %>
+      <%= link_to project.title, project %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="block purple">
+    <div class="heading">
+      Activity
+    </div>
+    <div class="num">101</div>
+  </div>
+
+  <div class="block yellow">
+    <div class="heading">
+      Reviews
+    </div>
+    <div class="num">101</div>
+  </div>
+
+  <!-- <div class="block blue">
+    <div class="heading">
+      Longer Heading 5
+    </div>
+    <div class="num">09:40</div>
+  </div> -->
+
+</div>
 
 <% if @profile.deactivate? %>
 <Span> Your Account has been deactivated <span><br><br>
 <% else %>
 <h1 class = "profilepic">
   <%= image_tag @profile.picture %></td>
-</h1>
-<h1 class = "profilename">
-  <!-- <strong>Name:</strong> -->
-  <%= @profile.name %>
 </h1>
 <div class = "profileinfo">
 <h2 class = "profilebio">
@@ -72,7 +112,7 @@
 <br>
 
 <% end %>
-</div>
+
 
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |
