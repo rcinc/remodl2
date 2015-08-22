@@ -4,7 +4,6 @@
 <h1 class="projectstitle">Projects</h1>
 </div>
 
-
   <body>
     <% @projects.each do |project| %>
       <div class="projects" style="margin-top: 10px;">
@@ -23,7 +22,7 @@
         <li class="protitle"><%= link_to 'Edit', edit_project_path(project) %></li>
       <% end %>
     </ul>
-    </div>
+  </div>
     <% end %>
   </body>
 </div>
