@@ -19,7 +19,11 @@
 
     <% @projects.each do |project| %>
     <p>
+      <% if project.url1 == "" %>
+      <%= image_tag "http://www.medillnews847.com/madeinchicago/midwife/img/home.png" %>
+      <% else %>
       <img class="prodimg"><%= image_tag project.url1%></img>
+      <% end %>
         <span><%= link_to project.title, project %></span><br>
         <span><%= project.description %></span><br>
         <span><%= project.created_at.strftime("%B %d, %Y") %></span><br>
