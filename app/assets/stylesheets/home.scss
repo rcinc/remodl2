@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .hometext {
-  color: grey;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 50px;
   max-width: 100%;
   height: auto;
@@ -14,14 +14,13 @@
 }
 
 .title {
-  color: rgba(00, 00, 00, 0.8);;
+  color: rgba(0,0,0,1);
   font-size: 75px;
   max-width: 100%;
   height: auto;
   text-align: center;
   margin-top: 0;
   text-shadow: 1px 1px 1px rgba(200,200,200,0.7)
-
 }
 
 
@@ -85,32 +84,32 @@ li .homeremodl {
   right: 20
 }
 
-.logo {
+// .logo {
+//
+//   background-repeat: no-repeat;
+//   position: absolute;
+//   float: center;
+//   overflow: hidden;
+//   z-index: -1000;
+//   margin-left: 0 auto;
+//   margin-top: 3%;
+//   max-width: 100%;
+//   height: auto;
+//   width: auto;
+//
+// }
 
-  background-repeat: no-repeat;
-  position: absolute;
-  float: center;
-  overflow: hidden;
-  z-index: -1000;
-  margin-left: 0 auto;
-  margin-top: 3%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
-
-}
-
-.homepic {
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin: 0;
-  padding: 0;
-  width:auto;
-  max-width:100%;
-  height:auto;
-  margin-left: 0 auto;
-
-}
+// .homepic {
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   margin: 0;
+//   padding: 0;
+//   width:auto;
+//   max-width:100%;
+//   height:auto;
+//   margin-left: 0 auto;
+//
+// }
 
 * {
   margin: 0;
