@@ -18,13 +18,18 @@
 
 <div class="subNav">
   <ul class="subNav-list">
+    <li class="subNav-list-item"><a class="subNav-list-item-link" href="#"></a></li>
     <li class="subNav-list-item"><a class="subNav-list-item-link" href="#">Recent</a></li>
     <li class="subNav-list-item"><a class="subNav-list-item-link" href="#">Discount</a></li>
     <li class="subNav-list-item"><a class="subNav-list-item-link subNav-list-item-link_active" href="#">Trending</a></li>
     <li class="subNav-list-item"><a class="subNav-list-item-link" href="#">Expired</a></li>
   </ul>
 </div><!-- end subNav -->
-
+<button class="flat up"><% @users.each do |user| %>
+<% if user.id == current_user.try(:id) && user.profile != nil && user.profile.vendor == false %>
+<%= link_to 'New Project', new_project_path %>
+<% end %>
+<% end %></button>
 <% @projects.each do |p| %>
 <div class="blockp">
   <a href="#">
@@ -94,11 +99,3 @@
 
 </div>
 </div>
-
-<br>
-<% @users.each do |user| %>
-<% if user.id == current_user.try(:id) && user.profile != nil && user.profile.vendor == false %>
-<%= link_to 'New Project', new_project_path %>
-<% end %>
-<% end %>
-<body>
