@@ -208,3 +208,22 @@ h1.projectstitle {
     width: 100%;
     background: #2c2c2c;
 }
+
+.regcontainer {
+  background-color: rgba(250,250,250, 0.7);
+  border: 1px solid rgb(255,255, 255,1);
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 3px 3px rgba(40,40,40,0.9);
+}
+
+.signupheader {
+  text-align: center;
+  color: black;
+  font-size: 22px;
+  margin-top: 3%;
+}
