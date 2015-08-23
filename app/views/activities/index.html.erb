@@ -1,16 +1,120 @@
+<html>
+  <head>
+    <meta name="viewport" content= "width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#B71C1C">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  </head>
+  <body>
+
+    <div class="allholder">
 
 
 
-<h1 class="activities">Activities</h1>
-<% if current_user && current_user.profile %>
-<% @activities.each do |activity| %>
-  <div class="activity" style="margin-top: 10px;">
-    <%= link_to activity.owner.try(:email), profile_path(activity.owner_id) %>
-    <%= render_activity activity %>
-  </div>
-<% end %>
-<% else %>
-<span>Please sign up/sign in to view activity</span>
-<% end %>
+      <div id="content">
+
+
+
+      <div class="feed">  <!--1 Column Feed Item Holder-->
+
+        <h1 class="activities">Activities</h1>
+        <% if current_user && current_user.profile %>
+          <% @activities.each do |activity| %>
+              <div class="activity" style="margin-top: 10px;">
+
+              </div>
+              <div class="feed-item blog">
+                <div class="icon-holder"><%= image_tag activity.owner.profile.picture %><div class="icon"></div></div>
+                <div class="text-holder col-3-5">
+                  <%= link_to activity.owner.profile.name, profile_path(activity.owner_id) %>
+                  <%= render_activity activity %>
+                  </div>
+                </div>
+          <% end %>
+        <% else %>
+        <span>Please sign up/sign in to view activity</span>
+        <% end %>
+<!--End of Text Holder-->
+
+
+
+    </div><!--end of Feed-->
+    </div><!-- End of Content-->
+    </div><!--end of allholder-->
+
+
+
+      <div class="filters">
+        <ul>
+          <li id="blog-filter">Blog</li>
+          <li id="portfolio-filter">Portfolio</li>
+        </ul>
+      </div><!--end of filters-->
+
+
+      <div id="plus"><i class="fa fa-pencil fa-lg icon"></i></div>
+    </div><!--end of bodyholder-->
+
+
+   <div id="activityform">
+   <div id="formHolder">
+    <form action="" id="newActivity">
+      <header><h2>Post a New Activity</h2></header>
+      <div>   <label class="desc" id="title1" for="Field1">Title: </label>
+      <div>   <input id="activityTitle" name="Field1" type="text" value="" tabindex="1">
+      </div>
+      </div>
+
+      <div>   <label class="desc" id="description1" for="Field2">Description: </label>
+      <div>   <textarea id="activityDescription" name="Field2" spellcheck="true" rows="9" col="50" tabindex="2"></textarea>
+      </div>
+      </div>
+
+      <div>   <label class="desc" id="description3" for="category">Category:</label>
+      <div>   <select id="activityCatagory" name="category" tabIndex="3">
+                <option value="na">- Select -</option>
+                <option value="blog">Blog</option>
+                <option value="portfolio">Porfolio</option>
+              </select>
+      </div>
+      </div>
+      <div><input id="saveForm" name="saveForm" type="submit" value="Submit"></div>
+    </form>
+   </div><!--End FormHolder-->
+
+   <div id="spacer"></div>
+
+   <div id="register">
+      <form action="" id="login">
+        <header><h2>Don't Forget to Login</h2></header>
+
+        <div>   <label class="labelStyle" id="logintitle1" for="loginField1"> Email:</label>
+        <div>   <input id="loginInput" name="loginField1" type="text" value="" tabindex="3">
+        </div>
+        </div><!--End Email Field-->
+
+
+        <div>   <label class="labelStyle" id="logintitle2" for="loginField2">Password:</label>
+        <div>   <input id="pwField" name="loginField2" type="password" value="" tabindex="4">
+        </div>
+        </div><!--End Password Field-->
+        <br />
+
+          <input id="registerForm" name="registerForm" type="submit" value="Register">
+          <input id="finalloginForm" name="loginForm" type="submit" value="Login">
+
+        <div id="forget">
+          <a href="#">Forgot your password?</a><br>
+          <a href="#">Forgot your username?</a>
+        </div>
+      </form>
+    </div><!--End Register-->
+    </div><!--End ActivityForm-->
+
+
+  </body>
+</html>
+
+
 
 <%#= link_to activity.owner.try(:email), redirect_to action: "show", id: activity.owner_id %>
