@@ -24,7 +24,7 @@
 
               </div>
               <div class="feed-item blog">
-                <div class="icon-holder"><%= image_tag activity.owner.profile.picture %><div class="icon"></div></div>
+                <div class="icon-holder"><div class="icon"><%= image_tag activity.owner.profile.picture %></div></div>
                 <div class="text-holder col-3-5">
                   <%= link_to activity.owner.profile.name, profile_path(activity.owner_id) %>
                   <%= render_activity activity %>
