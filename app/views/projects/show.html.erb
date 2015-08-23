@@ -344,6 +344,6 @@ Added on: <%= bid.created_at %>
   <% end %>
   <% end %>
 <% if @project.user_id == current_user.try(:id) %>
-<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Click Here to Edit, Accept, or Close', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
 <% end %>
