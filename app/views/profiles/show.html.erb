@@ -1,13 +1,20 @@
 
 
 
+
 <p id="notice"><%= notice %></p>
 <!-- <div class="header-container">
 <div class="header wrapper"><h1>Dashboard</h1></div> -->
-
-
-
-
+  <div class="pp">
+    <% if current_user.profile.picture == "" %>
+      <%= image_tag "http://www.mathblogging.org/images/icons/default-avatar.jpg" %>
+    <% else %>
+      <%= image_tag current_user.profile.picture %>
+    <% end %>
+  </div>
+  <div class="editpro">
+  <%= link_to 'Edit', edit_profile_path(@profile) %>
+  </div>
 
   <div class="block green">
     <div class="heading">
@@ -33,11 +40,18 @@
     </div>
   </div>
 
-  <div class="block purple">
+  <div class="block blue">
     <div class="heading">
       Activity
     </div>
-    <div class="num">101</div>
+    <div class="num">
+      <% @activities.each do |activity| %>
+        <div class="activityp" style="margin-top: 10px;">
+          <%= link_to activity.owner.try(:email), profiles_path(activity.owner_id) %>
+          <%= render_activity activity %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <div class="block yellow">
@@ -59,19 +73,9 @@
 <% if @profile.deactivate? %>
 <Span> Your Account has been deactivated <span><br><br>
 <% else %>
-<h1 class = "profilepic">
-  <%= image_tag @profile.picture %></td>
-</h1>
-<div class = "profileinfo">
-<h2 class = "profilebio">
-  <strong>Bio:</strong>
-  <%= @profile.bio %>
-</h2>
 
-<h2 class = "profilevendor">
-  <strong>Vendor:</strong>
-  <%= @profile.vendor %>
-</h2>
+
+
 
 <% if @profile.vendor? %>
 
@@ -112,8 +116,3 @@
 <br>
 
 <% end %>
-
-
-
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>

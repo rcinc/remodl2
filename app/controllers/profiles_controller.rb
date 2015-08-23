@@ -13,6 +13,12 @@ class ProfilesController < ApplicationController
   # GET /profiles/1.json
   def show
     @bids = Bid.all
+    if current_user && current_user.profile.vendor
+     @activities = PublicActivity::Activity.order("created_at desc")
+    else
+      @activities = PublicActivity::Activity.order("created_at desc")
+   #  @activities = PublicActivity::Activity.order("created_at desc").where(project_id == current_user.project_id)
+    end
   end
 
   # GET /profiles/new

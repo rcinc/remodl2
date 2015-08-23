@@ -1,46 +1,97 @@
 
-<form>
-  <div class="search"><%= form_tag search_path do %>
-    <%= search_field_tag :term, 'site search' %>
-    <%= submit_tag "Go!" %>
-  <% end %>
+<div class="statusBar">
+  <div class="split">
+    <div class="split-left">
+      <p><span class="txt_bold"><%= @projects.all.count %></span> projects </p>
+    </div>
+    <div class="split-right">
+      <p><span class="txt_bold"><form>
+        <div class="search"><%= form_tag search_path do %>
+          <%= search_field_tag :term, 'site search' %>
+          <%= submit_tag "Go!" %>
+        <% end %>
+        </div>
+      </form></span></p>
+    </div>
   </div>
-</form>
+</div><!-- end statusBar -->
+
+<div class="subNav">
+  <ul class="subNav-list">
+    <li class="subNav-list-item"><a class="subNav-list-item-link" href="#"></a></li>
+    <li class="subNav-list-item"><a class="subNav-list-item-link" href="#">Recent</a></li>
+    <li class="subNav-list-item"><a class="subNav-list-item-link" href="#">Discount</a></li>
+    <li class="subNav-list-item"><a class="subNav-list-item-link subNav-list-item-link_active" href="#">Trending</a></li>
+    <li class="subNav-list-item"><a class="subNav-list-item-link" href="#">Expired</a></li>
+  </ul>
+</div><!-- end subNav -->
+<button class="flat up"><% @users.each do |user| %>
+<% if user.id == current_user.try(:id) && user.profile != nil && user.profile.vendor == false %>
+<%= link_to 'New Project', new_project_path %>
+<% end %>
+<% end %></button>
+<% @projects.each do |p| %>
+<div class="blockp">
+  <a href="#">
+    <div class="box box_bowShadow">
+      <div class="split">
+        <div class="split-left">
+          <div class="totem">
+            <p class="totem-hd"> <%= link_to p.title, p %> </p>
+            <p class="totem-bd"><%= p.description.truncate(20) %></p>
+            <p class="totem-ft"><%= p.created_at.strftime("%B %d, %Y") %></p>
+            <% if p.bids.last == nil %>
+            <% if current_user.profile.vendor %>
+              <p class="totem-ft"> "No Bids Yet",<%= link_to "Click Here to Bid", p %></b></span><br>
+            <% end %>
+            <% else %>
+                <p class="totem-ft">lastest bid<br>$ <%= p.bids.last.bid %></span><br>
+                <% end %></p>
+                <% if current_user == p.user %>
+                <p class="totem-ft"><%= link_to 'Edit', edit_project_path(p) %></p>
+                <% end %>
+          </div>
+        </div>
+        <div class="split-right">
+          <% if p.url1 == "" %>
+        <div class="projectpic1">
+          <%= image_tag "http://www.medillnews847.com/madeinchicago/midwife/img/home.png" %>
+          <% else %>
+        <div class="projectpic"> <%= link_to image_tag p.url1%></div>
+          <% end %>
+        </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+<% end %>
+
+
+<div class="footer">
+  <div class="split">
+    <div class="split-left">
+      <small>&#169; 2014 front-end recreations</small>
+    </div>
+    <div class="split-right">
+      <a href="//www.twitter.com/frogmcw">
+        <i class="icon icon_smile"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
 <p id="notice"><%= notice %></p>
 <body class="projectbody">
-<div class="projecthead">
-<h1 class="projectstitle"><u>Active Projects</u></h1><br><br><br>
-</div>
+
 
 <div class="container">
 
   <body>
     <div class="list">
 
-    <% @projects.each do |project| %>
-    <p>
-      <% if project.url1 == "" %>
-      <%= image_tag "http://www.medillnews847.com/madeinchicago/midwife/img/home.png" %>
-      <% else %>
-      <img class="prodimg"><%= image_tag project.url1%></img>
-      <% end %>
-        <span><%= link_to project.title, project %></span><br>
-        <span><%= project.description %></span><br>
-        <span><%= project.created_at.strftime("%B %d, %Y") %></span><br>
-        <% if project.bids.last == nil %>
-        <span><b><%= "No Bids Yet" %></b></span><br>
-        <% else %>
-          <span><b>lastest bid</b><br>$ <%= project.bids.last.bid %></span><br>
-          <% end %>
 
-      <% if current_user.try(:id) == project.user_id %>
-      <span><%= link_to 'Edit', edit_project_path(project) %></span><br>
 
-      <% end %>
-
-    </ul>
-  </div>
-    <% end %>
 
     </p>
   </div>
@@ -48,11 +99,3 @@
 
 </div>
 </div>
-
-<br>
-<% @users.each do |user| %>
-<% if user.id == current_user.try(:id) && user.profile != nil && user.profile.vendor == false %>
-<%= link_to 'New Project', new_project_path %>
-<% end %>
-<% end %>
-<body>
