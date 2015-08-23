@@ -27,15 +27,66 @@
       <p>
         <%= @profile.bio %>
       </p>
+      <% if @profile.deactivate? %>
+      <Span> Your Account has been deactivated <span><br><br>
+      <% else %>
+
+
+
+
+      <% if @profile.vendor? %>
+
+      <h2 class = "profilevendor">
+        <strong>Company:</strong>
+        <%= @profile.company %>
+      </h2>
+
+      <h2 class = "profilevendor">
+        <strong>Address:</strong>
+        <%= @profile.address %>
+      </h2>
+      <h2 class = "profilevendor">
+        <strong>Phone:</strong>
+        <%= @profile.phone %>
+      </h2>
+      <h2 class = "profilevendor">
+        <strong>License Type:</strong>
+        <%= @profile.license_type %>
+      </h2>
+      <h2 class = "profilevendor">
+        <strong>License Number:</strong>
+        <%= @profile.license_number %>
+      </h2>
+
+      <% end %>
     </div>
   </div>
   <div class="block orange">
-    <div class="heading">
-      Projects
-    </div>
-    <div class="num">
-      <% current_user.projects.each do |project| %>
-      <%= link_to project.title, project %>
+      <% if current_user.profile.vendor  %>
+          <div class="heading">
+            Bidded Projects
+          </div>
+          <% if current_user.bids.empty?%>
+              <p>No Current Bidded Projects</p>
+          <% else %>
+              <% current_user.bids.each do |bid| %>
+              $<%= bid.bid %>
+              <%= link_to bid.project.title, bid.project %>
+              <% end %>
+          <% end%>
+
+      <% else %>
+        <div class="heading">
+          Projects
+        </div>
+        <div class="num">
+            <% if current_user.projects.empty? %>
+            <p>No current projects</p>
+            <% else %>
+            <% current_user.projects.each do |project| %>
+            <%= link_to project.title, project %>
+            <% end %>
+          <% end %>
       <% end %>
     </div>
   </div>
@@ -70,48 +121,10 @@
 
 </div>
 
-<% if @profile.deactivate? %>
-<Span> Your Account has been deactivated <span><br><br>
-<% else %>
 
 
 
 
-<% if @profile.vendor? %>
-
-<h2 class = "profilevendor">
-  <strong>Company:</strong>
-  <%= @profile.company %>
-</h2>
-
-<h2 class = "profilevendor">
-  <strong>Address:</strong>
-  <%= @profile.address %>
-</h2>
-<h2 class = "profilevendor">
-  <strong>Phone:</strong>
-  <%= @profile.phone %>
-</h2>
-<h2 class = "profilevendor">
-  <strong>License Type:</strong>
-  <%= @profile.license_type %>
-</h2>
-<h2 class = "profilevendor">
-  <strong>License Number:</strong>
-  <%= @profile.license_number %>
-</h2>
-
-<% end %>
-
-
-<% unless @profile.vendor == false %>
-<h2 class = "mybids">My Bids</h2>
-<% @bids.each do |bid| %>
-<% if bid.user == current_user %>
-<%= link_to bid.project.title, project_path(bid.project_id) %> $<%= link_to bid.bid, project_path(bid.project_id) %><br><br>
-<% end %>
-<% end %>
-<% end %>
 <br>
 <br>
 
