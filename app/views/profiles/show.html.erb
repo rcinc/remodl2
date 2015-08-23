@@ -85,7 +85,7 @@
             <% else %>
             <% current_user.projects.each do |project| %>
             <% if project.closed == false %>
-            <%= link_to project.title, project %>
+            <%= link_to project.title, project %><br>
             <% end %>
             <% end %>
           <% end %>

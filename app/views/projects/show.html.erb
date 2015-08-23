@@ -19,13 +19,13 @@
 
 <p>
   <strong>Budget:</strong>
-  <%= @project.budget %>
+  $<%= @project.budget %>
 </p>
 
 
 <p>
   <strong>Created:</strong>
-  <%= @project.date %>
+  <%= @project.created_at.strftime("%B %d, %Y") %>
 </p>
 
 <p>
@@ -309,7 +309,7 @@ $<%= bid.bid %>
 <%= link_to 'Edit Your Bid', edit_bid_path(bid) %>
 <% end %>
 <br>
-Added on: <%= bid.created_at %>
+Added on: <%= bid.created_at.strftime("%B %d, %Y") %>
 <% if current_user == bid.project.user%>
 <%=  link_to 'Accept This Bid', closed_project_path(bid.project, bid_id: bid.id) %>
 </p>
