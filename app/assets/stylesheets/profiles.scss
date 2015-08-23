@@ -39,7 +39,7 @@ $yellow: #e3ea77;
 $blue: #7ca6de;
 
 body {
-font-family:'Raleway';
+// font-family:'Raleway';
 }
 
 .wrapper {
@@ -67,14 +67,14 @@ width:95%;
 
 .blocks {
 // margin: 0 auto;
-margin-top: 15%
+margin-top: 20%;
 }
 
 .block {
   // margin-left: 3%;
   left: 9%;
   float:left;
-  margin-top:20px;
+  margin-top:5%;
   position:relative;
   background: black;
   color: $base;
@@ -85,14 +85,14 @@ margin-top: 15%
   box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
   text-align: center;
   overflow:hidden;
-
+  up: 5%;
   -webkit-backface-visibility: hidden;
 
   border:solid 1px #000;
 }
 
 .block:hover {
-  width: 20%;
+  // width: 20%;
   // margin-left: 2%;
 }
 
@@ -135,4 +135,15 @@ color: $yellow;
 .blue {
 font-family: 'Open Sans', sans-serif;
 color: $blue;
+}
+
+.pp {
+  margin-top: 5%;
+  margin-left: 40%;
+}
+
+.editpro {
+  text-align: center;
+  margin-top: 3%;
+  margin-right: 2%;
 }
