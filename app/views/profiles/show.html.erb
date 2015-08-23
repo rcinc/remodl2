@@ -13,7 +13,7 @@
     <% end %>
   </div>
   <div class="editpro">
-  <%= link_to 'Edit', edit_profile_path(@profile) %> 
+  <%= link_to 'Edit', edit_profile_path(@profile) %>
   </div>
 
   <div class="block green">
@@ -40,11 +40,18 @@
     </div>
   </div>
 
-  <div class="block purple">
+  <div class="block blue">
     <div class="heading">
       Activity
     </div>
-    <div class="num">101</div>
+    <div class="num">
+      <% @activities.each do |activity| %>
+        <div class="activityp" style="margin-top: 10px;">
+          <%= link_to activity.owner.try(:email), profiles_path(activity.owner_id) %>
+          <%= render_activity activity %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <div class="block yellow">

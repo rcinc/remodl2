@@ -25,9 +25,11 @@
 }
 
 
- // strong.login {
- //   left: 10px;
- // }
+ strong.login {
+  //  left: 350px;
+   float: right;
+   overflow: hidden;
+ }
 strong.login:hover {
   color: #ddc367;
   // cursor: pointer;
