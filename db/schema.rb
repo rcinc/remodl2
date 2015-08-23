@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150821175210) do
+ActiveRecord::Schema.define(version: 20150823153354) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -32,10 +32,11 @@ ActiveRecord::Schema.define(version: 20150821175210) do
 
   create_table "bids", force: :cascade do |t|
     t.integer  "bid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "user_id"
     t.integer  "project_id"
+    t.boolean  "accepted",   default: false
   end
 
   add_index "bids", ["project_id"], name: "index_bids_on_project_id"
@@ -126,9 +127,10 @@ ActiveRecord::Schema.define(version: 20150821175210) do
     t.boolean  "electrical"
     t.boolean  "plumbing"
     t.boolean  "handy_man"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
     t.integer  "user_id"
+    t.boolean  "closed",             default: false
   end
 
   add_index "projects", ["user_id"], name: "index_projects_on_user_id"

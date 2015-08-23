@@ -2,7 +2,7 @@
 <div class="statusBar">
   <div class="split">
     <div class="split-left">
-      <p><span class="txt_bold"><%= @projects.all.count %></span> projects </p>
+      <p><span class="txt_bold"><%= @projects.where(:closed == false).count %></span> projects </p>
     </div>
     <div class="split-right">
       <p><span class="txt_bold"><form>
@@ -31,6 +31,7 @@
 <% end %>
 <% end %></button>
 <% @projects.each do |p| %>
+<% if p.closed == false %>
 <div class="blockp">
   <a href="#">
     <div class="box box_bowShadow">
@@ -47,7 +48,7 @@
             <p class="totem-ft"> "No Bids Yet"</p>
             <% end %>
             <% else %>
-                <p class="totem-ft">lastest bid<br>$ <%= p.bids.last.bid %></span><br>
+                <p class="totem-ft">Current Low Bid<br>$ <%= p.bids.minimum(:bid) %></span><br>
                 <% end %></p>
                 <% if current_user == p.user %>
                 <p class="totem-ft"><%= link_to 'Edit', edit_project_path(p) %></p>
@@ -67,6 +68,7 @@
     </div>
   </a>
 </div>
+<% end %>
 <% end %>
 
 
