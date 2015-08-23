@@ -77,14 +77,16 @@
 
       <% else %>
         <div class="heading">
-          Projects
+          Active Projects
         </div>
         <div class="num">
             <% if current_user.projects.empty? %>
             <p>No current projects</p>
             <% else %>
             <% current_user.projects.each do |project| %>
+            <% if project.closed == false %>
             <%= link_to project.title, project %>
+            <% end %>
             <% end %>
           <% end %>
       <% end %>
@@ -107,9 +109,15 @@
 
   <div class="block yellow">
     <div class="heading">
-      Reviews
+      Closed Projects
     </div>
-    <div class="num">101</div>
+    <div class="num">
+    <% current_user.projects.each do |project|%>
+    <% if project.closed %>
+    <%= link_to project.title, project %>
+    <% end %>
+    <% end %>
+    </div>
   </div>
 
   <!-- <div class="block blue">

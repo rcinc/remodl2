@@ -297,6 +297,11 @@
 </p>
 <br>
 <br>
+<% if @project.closed %>
+<h3>This project is closed, and the following bid was accepted</h3>
+<%= @project.bids.where(:accepted == true) %>
+
+<% else %>
   <h3>Current Bids</h3>
 <% @project.bids.each do |bid| %> <p>
 $<%= bid.bid %>
@@ -305,7 +310,11 @@ $<%= bid.bid %>
 <% end %>
 <br>
 Added on: <%= bid.created_at %>
+<% if current_user == bid.project.user%>
+<%=  link_to 'Accept This Bid', closed_project_path(bid.project, bid_id: bid.id) %>
 </p>
+<% end %>
+<% end %>
 <% end %>
 <br>
 <br>
