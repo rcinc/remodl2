@@ -6,7 +6,8 @@
     </div>
     <div class="split-right">
       <p><span class="txt_bold"><form>
-        <div class="search"><%= form_tag search_path do %>
+        <div class="search">
+          <%= form_tag search_path do %>
           <%= search_field_tag :term, 'site search' %>
           <%= submit_tag "Go!" %>
         <% end %>
