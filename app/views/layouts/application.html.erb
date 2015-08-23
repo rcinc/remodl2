@@ -21,8 +21,7 @@
    <li class="navprojects"><%= link_to 'Projects', projects_path %></li>
    <% if current_user && current_user.profile%>
    <li class="navprofile"><%= link_to 'Profile', current_user.profile %></li>
-   <% else %>
-   <li class="navprofile"><%= link_to 'Profile', new_profile_path %></li>
+
    <% end %>
    <li class="navactivity"><%= link_to 'Activity', activities_path %></li>
    <li><%= link_to 'About', about_index_path %></li>
