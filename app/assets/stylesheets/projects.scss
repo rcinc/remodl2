@@ -129,12 +129,20 @@ statusBar styles
 -------------------------------*/
 .statusBar {
   padding: 3px 10px;
-  background: $COLOR_MAIN;
+  background: #2fa2ad;
   color: $COLOR_WHITE;
   box-shadow: 0 0 3px $COLOR_GRAY;
   /*position and z-index for box-shadow*/
   position: relative;
   z-index: 2;
+}
+
+.projectim {
+  max-width: 30%;
+  float: right;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px;
 }
 
 /*------------------------------
@@ -263,3 +271,31 @@ footer styles
     display: inline-block;
   }
 }
+
+.projectpic {
+  // margin-top: -3.5%;
+  margin-bottom: 2%;
+  width: 750px;
+  max-width: 100%;
+  height: auto;
+  float: right;
+  // margin-right: %;
+}
+
+.projectpic1 {
+  margin-bottom: 1.5%;
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  float: right;
+}
+
+.projectpic:hover {
+  width: 1050px;
+  height: auto;
+}
+
+// .projectpic1:hover {
+//   width: 1050px;
+//   height: auto;
+// }

@@ -5,7 +5,13 @@
       <p><span class="txt_bold"><%= @projects.all.count %></span> projects </p>
     </div>
     <div class="split-right">
-      <p><span class="txt_bold">8/10</span> added</p>
+      <p><span class="txt_bold"><form>
+        <div class="search"><%= form_tag search_path do %>
+          <%= search_field_tag :term, 'site search' %>
+          <%= submit_tag "Go!" %>
+        <% end %>
+        </div>
+      </form></span></p>
     </div>
   </div>
 </div><!-- end statusBar -->
@@ -19,38 +25,42 @@
   </ul>
 </div><!-- end subNav -->
 
+<% @projects.each do |p| %>
 <div class="blockp">
   <a href="#">
     <div class="box box_bowShadow">
       <div class="split">
         <div class="split-left">
           <div class="totem">
-            <% @projects.each do |p| %>
             <p class="totem-hd"> <%= link_to p.title, p %> </p>
             <p class="totem-bd"><%= p.description.truncate(20) %></p>
             <p class="totem-ft"><%= p.created_at.strftime("%B %d, %Y") %></p>
             <% if p.bids.last == nil %>
             <% if current_user.profile.vendor %>
               <p class="totem-ft"> "No Bids Yet",<%= link_to "Click Here to Bid", p %></b></span><br>
-profiles_path(activity.owner_id)
-<% end %>
-              <% else %>
+            <% end %>
+            <% else %>
                 <p class="totem-ft">lastest bid<br>$ <%= p.bids.last.bid %></span><br>
                 <% end %></p>
+                <% if current_user == p.user %>
+                <p class="totem-ft"><%= link_to 'Edit', edit_project_path(p) %></p>
+                <% end %>
           </div>
         </div>
         <div class="split-right">
           <% if p.url1 == "" %>
-          <img><%= image_tag "http://www.medillnews847.com/madeinchicago/midwife/img/home.png" %>
+        <div class="projectpic1">
+          <%= image_tag "http://www.medillnews847.com/madeinchicago/midwife/img/home.png" %>
           <% else %>
-          <img> <%= image_tag project.url1%></img>
+        <div class="projectpic"> <%= link_to image_tag p.url1%></div>
           <% end %>
-          <% end %>
+        </div>
         </div>
       </div>
     </div>
   </a>
 </div>
+<% end %>
 
 
 <div class="footer">
@@ -65,13 +75,7 @@ profiles_path(activity.owner_id)
     </div>
   </div>
 </div>
-<form>
-  <div class="search"><%= form_tag search_path do %>
-    <%= search_field_tag :term, 'site search' %>
-    <%= submit_tag "Go!" %>
-  <% end %>
-  </div>
-</form>
+
 <p id="notice"><%= notice %></p>
 <body class="projectbody">
 
@@ -81,21 +85,8 @@ profiles_path(activity.owner_id)
   <body>
     <div class="list">
 
-    <% @projects.each do |project| %>
-    <p>
-        <span><%= link_to project.title, project %></span><br>
-        <span><%= project.description %></span><br>
-        <span><%= project.created_at.strftime("%B %d, %Y") %></span><br>
 
 
-      <% if current_user.try(:id) == project.user_id %>
-      <span><%= link_to 'Edit', edit_project_path(project) %></span><br>
-
-      <% end %>
-
-    </ul>
-  </div>
-    <% end %>
 
     </p>
   </div>
