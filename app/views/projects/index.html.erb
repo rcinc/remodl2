@@ -2,7 +2,7 @@
 <div class="statusBar">
   <div class="split">
     <div class="split-left">
-      <p><span class="txt_bold"><%= @projects.all.count %></span> projects </p>
+      <p><span class="txt_bold"><%= @projects.where(:closed == false).count %></span> projects </p>
     </div>
     <div class="split-right">
       <p><span class="txt_bold"><form>
@@ -31,6 +31,7 @@
 <% end %>
 <% end %></button>
 <% @projects.each do |p| %>
+<% if p.closed == false %>
 <div class="blockp">
   <a href="#">
     <div class="box box_bowShadow">
@@ -67,6 +68,7 @@
     </div>
   </a>
 </div>
+<% end %>
 <% end %>
 
 
