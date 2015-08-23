@@ -41,8 +41,10 @@
             <p class="totem-bd"><%= p.description.truncate(20) %></p>
             <p class="totem-ft"><%= p.created_at.strftime("%B %d, %Y") %></p>
             <% if p.bids.last == nil %>
-            <% if current_user.profile.vendor %>
+            <% if user_signed_in? && current_user.profile && current_user.profile.vendor %>
               <p class="totem-ft"> "No Bids Yet",<%= link_to "Click Here to Bid", p %></b></span><br>
+            <% else %>
+            <p class="totem-ft"> "No Bids Yet"</p>
             <% end %>
             <% else %>
                 <p class="totem-ft">lastest bid<br>$ <%= p.bids.last.bid %></span><br>

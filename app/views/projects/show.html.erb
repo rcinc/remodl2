@@ -332,7 +332,7 @@ Added on: <%= bid.created_at %>
 <% end %>
 
 <br>
-<% if current_user %>
+<% if current_user && current_user.profile %>
 <%= form_for [@project, @comment] do |f| %>
   <div class="field">
     <%= f.label :Ask_a_Question_or_Post_a_comment_on_this_project %><br>
