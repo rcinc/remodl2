@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
   has_many :reviews
   has_many :comments
 
-  scope :search, ->(term) { where(" title LIKE ? ", "%#{term}%") }
+  scope :search, ->(term) { where("Title  LIKE ? ", "%#{term}%") }
   
 
 end

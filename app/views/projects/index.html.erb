@@ -5,14 +5,12 @@
       <p><span class="txt_bold"><%= @projects.where(:closed == false).count %></span> projects </p>
     </div>
     <div class="split-right">
-      <p><span class="txt_bold"><form>
-        <div class="search">
-          <%= form_tag search_path do %>
-          <%= search_field_tag :term, 'site search' %>
-          <%= submit_tag "Go!" %>
-        <% end %>
-        </div>
-      </form></span></p>
+      <div class="search">
+        <%= form_tag search_path do %>
+        <%= search_field_tag :term, ' Search Projects' %>
+        <%= submit_tag "Go!" %>
+      <% end %>
+      </div>
     </div>
   </div>
 </div><!-- end statusBar -->
