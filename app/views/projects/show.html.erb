@@ -304,6 +304,7 @@
 <% else %>
   <h3>Current Bids</h3>
 <% @project.bids.each do |bid| %> <p>
+  <%=link_to bid.user.profile.company, bid.user.profile%>
 $<%= bid.bid %>
 <% if bid.user == current_user%>
 <%= link_to 'Edit Your Bid', edit_bid_path(bid) %>
@@ -355,4 +356,5 @@ Added on: <%= bid.created_at.strftime("%B %d, %Y") %>
 <% if @project.user_id == current_user.try(:id) %>
 <%= link_to 'Click Here to Edit, Accept, or Close', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
+  
 <% end %>
