@@ -68,69 +68,80 @@
     <%= f.label :url4 %><br>
     <%= f.text_field :url4 %>
   </div>
-  <h4>Please check all that apply to your project</h4>
+  <h4 class="please">Please check all that apply to your project</h4>
 
   <div class="categories">
+    <div class="flexbox">
+      <div class="container1">
   <div class="kitch">
-    <%= f.label :kitchen %><br>
-    <%= f.check_box :kitchen %>
+
+    <label><input type="checkbox" name="name" value="">Kitchen<label>
   </div>
   <div class="ac">
-    <%= f.label :air_conditioning %><br>
-    <%= f.check_box :air_conditioning %>
+
+    <label><input type="checkbox" name="name" value="">Air Conditioning<label>
   </div>
   <div class="roof">
-    <%= f.label :roof %><br>
-    <%= f.check_box :roof %>
+
+    <label><input type="checkbox" name="name" value="">Roof<label>
   </div>
   <div class="extg">
-    <%= f.label :exterior_general %><br>
-    <%= f.check_box :exterior_general %>
+
+    <label><input type="checkbox" name="name" value="">Exterior<label>
   </div>
   <div class="paint">
-    <%= f.label :paint %><br>
-    <%= f.check_box :paint %>
+
+    <label><input type="checkbox" name="name" value="">Paint<label>
   </div>
+
+</div><%# closed container 1%>
+<div class="container2">
   <div class="floor">
-    <%= f.label :floor %><br>
-    <%= f.check_box :floor %>
+
+    <label><input type="checkbox" name="name" value="">Floor<label>
   </div>
   <div class="bath">
-    <%= f.label :bath %><br>
-    <%= f.check_box :bath %>
+
+    <label><input type="checkbox" name="name" value="">Bath<label>
   </div>
   <div class="pool">
-    <%= f.label :pool %><br>
-    <%= f.check_box :pool %>
+
+    <label><input type="checkbox" name="name" value="">Pool<label>
   </div>
   <div class="drive">
-    <%= f.label :drive_way %><br>
-    <%= f.check_box :drive_way %>
+
+    <label><input type="checkbox" name="name" value="">Driveway<label>
   </div>
   <div class="land">
-    <%= f.label :landscaping %><br>
-    <%= f.check_box :landscaping %>
+
+    <label><input type="checkbox" name="name" value="">Landscaping<label>
   </div>
+
+  </div><%# closed container 2%>
+
+  <div class="container3">
   <div class="fence">
-    <%= f.label :fence %><br>
-    <%= f.check_box :fence %>
+
+    <label><input type="checkbox" name="name" value="">Fence<label>
   </div>
   <div class="win">
-    <%= f.label :windows %><br>
-    <%= f.check_box :windows %>
+
+    <label><input type="checkbox" name="name" value="">Windows<label>
   </div>
   <div class="elec">
-    <%= f.label :electrical %><br>
-    <%= f.check_box :electrical %>
+
+    <label><input type="checkbox" name="name" value="">Electrical<label>
   </div>
   <div class="plumb">
-    <%= f.label :plumbing %><br>
-    <%= f.check_box :plumbing %>
+
+    <label><input type="checkbox" name="name" value="">Plumbing<label>
   </div>
   <div class="handy">
-    <%= f.label :handy_man %><br>
-    <%= f.check_box :handy_man %>
+
+    <label><input type="checkbox" name="name" value="">Handy<label>
   </div>
+</div><%# closed contianer3%>
+</div><%# /.flexbox%>
 </div>
 </ul>
 

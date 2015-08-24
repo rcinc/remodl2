@@ -30,8 +30,7 @@
     <%= f.text_area :bio %>
   </div>
   <div class="vendor">
-    <%= f.label :vendor %><br>
-    <%= f.check_box :vendor %>
+    <label><input type="checkbox" name="name" value="">Vendor<label>
   </div>
   <div id="company" style="display:none;">
     <%= f.label :company %><br>
@@ -56,9 +55,8 @@
 
   <br>
   <br>
-  <div class="field">
-    <%= f.label :Deactivate_Profile? %>
-    <%= f.check_box :deactivate %>
+  <div class="field vendor">
+    <label><input type="checkbox" name="name" value="">Deactive Profile?<label>
   </div>
   <button type="submit">
     Done
