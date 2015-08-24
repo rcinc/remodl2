@@ -185,12 +185,29 @@ https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm
 
  div img {
     width:auto;
-    max-width:30%;
+    max-width:100%;
     height:auto;
     margin-left: 0 auto;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+.icon img {
+max-width: 55px;
+height: 55px;
+border-radius: 150px;
+-webkit-border-radius: 150px;
+-moz-border-radius: 150px;
+}
+
+.projectpic1 {
+   width:auto;
+   max-width:12%;
+   height:auto;
+   margin-left: 0 auto;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
 }
 
 img {
