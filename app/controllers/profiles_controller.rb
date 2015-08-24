@@ -1,10 +1,7 @@
 class ProfilesController < ApplicationController
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
-<<<<<<< HEAD
-  before_action :authenticate_this_user, :except => [:new, :show, :upvote, :downvote, :create, :index]
-=======
+
   before_action :authenticate_this_user, :except => [:new, :upvote, :downvote, :create, :index, :show]
->>>>>>> rob
 
   # GET /profiles
   # GET /profiles.json
@@ -95,7 +92,7 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:name, :user_id, :name, :picture, :bio, :deactivate, :vendor, :company, :address, :phone, :license_type, :license_number)
+      params.require(:profile).permit(:name, :user_id, :name, :picture, :bio, :deactivate, :vendor, :company, :address, :phone, :license_type, :license_number, :attachment)
     end
 
     def authenticate_this_user
