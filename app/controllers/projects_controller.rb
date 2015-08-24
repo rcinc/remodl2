@@ -19,8 +19,6 @@ class ProjectsController < ApplicationController
     @comment = Comment.new
     @comments = Comment.all
     @show_bid_form =  @project.bids.where(user: current_user).empty?
-    end
-
   end
 
   # GET /projects/new
