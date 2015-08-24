@@ -24,8 +24,8 @@ https://unsplash.imgix.net/photo-1415226605610-f53c5c1ea8e9?fit=crop&fm=jpg&h=12
 https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm=jpg&h=650&q=80&w=950*/
 
  html {
-   background: rgb(225,225,225);
-
+   /*background: rgb(225,225,225);*/
+   background-image: url("http://www.galaxiastudio.com/wp-content/uploads/2014/03/2252.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    margin: 0;
@@ -221,11 +221,11 @@ h1.projectstitle {
     background: #2c2c2c;
 }
 
-/*.signupp {
-  background-image: url("https://unsplash.imgix.net/photo-1433785567155-bf5530cab72c?fit=crop&fm=jpg&h=775&q=75&w=1050");
+.signupp {
+  background-image: url("https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm=jpg&h=650&q=80&w=950");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 1000px;
 
-}*/
+}
