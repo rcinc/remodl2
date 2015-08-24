@@ -1,5 +1,17 @@
 <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign Up Form</title>
+      <link rel="stylesheet" href="css/normalize.css">
+      <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+
+
+<head>
 </head>
+<div class="projectnew">
 
 <%= form_for(@project) do |f| %>
   <% if @project.errors.any? %>
@@ -15,6 +27,7 @@
   <% end %>
 
 <ul>
+  <legend><span class="number">+</span>New Project</legend>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -57,7 +70,7 @@
   </div>
   <h4>Please check all that apply to your project</h4>
 
-
+  <div class="categories">
   <div class="kitch">
     <%= f.label :kitchen %><br>
     <%= f.check_box :kitchen %>
@@ -118,6 +131,7 @@
     <%= f.label :handy_man %><br>
     <%= f.check_box :handy_man %>
   </div>
+</div>
 </ul>
 
 
@@ -209,7 +223,8 @@
     <%= f.label :quantity %><br>
     <%= f.number_field :quantity %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <button type="submit">
+    Post
+  </button>
 <% end %>
+</div>
