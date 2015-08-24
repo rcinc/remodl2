@@ -38,259 +38,259 @@
   <span>in </span><%= @project.ends %><span> days</span>
 </p>
 <p>
-  <% if !@project.url2 == nil || false %>
+  <% unless @project.url2 == "" %>
   <strong>Url2:</strong>
   <%= @project.url2 %>
   <% end %>
 </p>
 
-<p>  <% if !@project.url3 == nil || false %>
+<p>  <% unless @project.url3 == "" %>
   <strong>Url3:</strong>
   <%= @project.url3 %>
   <% end %>
 </p>
 
-<p>  <% if !@project.url4 == nil || false %>
+<p>  <% unless @project.url4 == "" %>
   <strong>Url4:</strong>
   <%= @project.url4 %>
     <% end %>
 </p>
 
 
-<p>  <% if !@project.kitchen == nil || false %>
+<p>  <% unless @project.kitchen == false %>
   <strong>Kitchen:</strong>
   <%= @project.kitchen %>
   <% end %>
 </p>
 
 
-<p>  <% if !@project.sqft == nil || false %>
+<p>  <% unless @project.sqft == nil %>
   <strong>Sqft:</strong>
   <%= @project.sqft %>
   <% end %>
 </p>
 
 
-<p>  <% if !@project.number_of_cabinets == nil || false %>
+<p>  <% unless @project.number_of_cabinets == nil %>
   <strong>Number of cabinets:</strong>
   <%= @project.number_of_cabinets %>
   <% end %>
 </p>
 
-<p> <% if !@project.countertop_style == nil || false %>
+<p> <% unless @project.countertop_style == "" %>
   <strong>Countertop style:</strong>
   <%= @project.countertop_style %>
   <% end %>
 </p>
 
 
-<p> <% if !@project.counter_top_length == nil || false %>
+<p> <% unless @project.counter_top_length == nil %>
   <strong>Counter top length:</strong>
   <%= @project.counter_top_length %>
   <% end %>
 </p>
 
 
-<p> <% if !@project.number_of_outlets == nil || false %>
+<p> <% unless @project.number_of_outlets == nil %>
   <strong>Number of outlets:</strong>
   <%= @project.number_of_outlets %>
   <% end %>
 </p>
 
-<p> <% if !@project.light_fixture_type == nil || false %>
+<p> <% unless @project.light_fixture_type == "" %>
   <strong>Light fixture type:</strong>
   <%= @project.light_fixture_type %>
   <% end %>
 </p>
 
-<p> <% if !@project.floor_sqft == nil || false %>
+<p> <% unless @project.floor_sqft ==  nil %>
   <strong>Floor sqft:</strong>
   <%= @project.floor_sqft %>
   <% end %>
 </p>
 
-<p> <% if !@project.floor_type == nil || false %>
+<p> <% unless @project.floor_type ==  "" %>
   <strong>Floor type:</strong>
   <%= @project.floor_type %>
   <% end %>
 </p>
 
-<p> <% if !@project.bath == nil || false %>
+<p> <% unless @project.bath == false %>
   <strong>Bath:</strong>
   <%= @project.bath %>
   <% end %>
 </p>
 
-<p> <% if !@project.vanity_width == nil || false %>
+<p> <% unless @project.vanity_width == nil %>
   <strong>Vanity width:</strong>
   <%= @project.vanity_width %>
   <% end %>
 </p>
 
-<p> <% if !@project.tub_length == nil || false %>
+<p> <% unless @project.tub_length == nil %>
   <strong>Tub length:</strong>
   <%= @project.tub_length %>
   <% end %>
 </p>
 
-<p> <% if !@project.shower_sqft == nil || false %>
+<p> <% unless @project.shower_sqft == nil %>
   <strong>Shower sqft:</strong>
   <%= @project.shower_sqft %>
   <% end %>
 </p>
 
-<p> <% if !@project.mirror == nil || false %>
+<p> <% unless @project.mirror == "" %>
   <strong>Mirror:</strong>
   <%= @project.mirror %>
   <% end %>
 </p>
 
-<p> <% if !@project.bath_fan == nil || false %>
+<p> <% unless @project.bath_fan == "" %>
   <strong>Bath fan:</strong>
   <%= @project.bath_fan %>
   <% end %>
 </p>
 
-<p> <% if !@project.air_conditioning == nil || false %>
+<p> <% unless @project.air_conditioning == false %>
   <strong>Air conditioning:</strong>
   <%= @project.air_conditioning %>
   <% end %>
 </p>
 
-<p> <% if !@project.ac_type == nil || false %>
+<p> <% unless @project.ac_type == "" %>
   <strong>Ac type:</strong>
   <%= @project.ac_type %>
   <% end %>
 </p>
 
-<p> <% if !@project.home_sqft == nil || false %>
+<p> <% unless @project.home_sqft == nil %>
   <strong>Home sqft:</strong>
   <%= @project.home_sqft %>
   <% end %>
 </p>
 
-<p> <% if !@project.ac_size == nil || false %>
+<p> <% unless @project.ac_size == nil %>
   <strong>Ac size:</strong>
   <%= @project.ac_size %>
   <% end %>
 </p>
 
-<p> <% if !@project.duct_work == nil || false %>
+<p> <% unless @project.duct_work == "" %>
   <strong>Duct work:</strong>
   <%= @project.duct_work %>
   <% end %>
 </p>
 
-<p> <% if !@project.roof == nil || false %>
+<p> <% unless @project.roof == false %>
   <strong>Roof:</strong>
   <%= @project.roof %>
   <% end %>
 </p>
 
-<p> <% if !@project.exterior_general == nil || false %>
+<p> <% unless @project.exterior_general == false %>
   <strong>Exterior general:</strong>
   <%= @project.exterior_general %>
   <% end %>
 </p>
 
-<p> <% if !@project.more_detail == nil || false %>
+<p> <% unless @project.more_detail == "" %>
   <strong>More detail:</strong>
   <%= @project.more_detail %>
   <% end %>
 </p>
 
-<p> <% if !@project.paint == nil || false %>
+<p> <% unless @project.paint == false %>
   <strong>Paint:</strong>
   <%= @project.paint %>
   <% end %>
 </p>
 
-<p> <% if !@project.floor == nil || false %>
+<p> <% unless @project.floor == false %>
   <strong>Floor:</strong>
   <%= @project.floor %>
   <% end %>
 </p>
 
-<p> <% if !@project.floor_demo == nil || false %>
+<p> <% unless @project.floor_demo == "" %>
   <strong>Floor demo:</strong>
   <%= @project.floor_demo %>
   <% end %>
 </p>
 
 
-<p> <% if !@project.pool == nil || false %>
+<p> <% unless @project.pool == false %>
   <strong>Pool:</strong>
   <%= @project.pool %>
 </p>
 <% end %>
 
-<p> <% if !@project.drive_way == nil || false %>
+<p> <% unless @project.drive_way == false %>
   <strong>Drive way:</strong>
   <%= @project.drive_way %>
   <% end %>
 </p>
 
-<p> <% if !@project.length == nil || false %>
+<p> <% unless @project.length == nil %>
   <strong>Length:</strong>
   <%= @project.length %>
   <% end %>
 </p>
 
-<p> <% if !@project.width == nil || false %>
+<p> <% unless @project.width == nil %>
   <strong>Width:</strong>
   <%= @project.width %>
   <% end %>
 </p>
 
-<p> <% if !@project.landscaping == nil || false %>
+<p> <% unless @project.landscaping == false %>
   <strong>Landscaping:</strong>
   <%= @project.landscaping %>
   <% end %>
 </p>
 
-<p> <% if !@project.fence == nil || false %>
+<p> <% unless @project.fence == false %>
   <strong>Fence:</strong>
   <%= @project.fence %>
   <% end %>
 </p>
 
-<p> <% if !@project.fence_material == nil || false %>
+<p> <% unless @project.fence_material == "" %>
   <strong>Fence material:</strong>
   <%= @project.fence_material %>
   <% end %>
 </p>
 
-<p> <% if !@project.windows == nil || false %>
+<p> <% unless @project.windows == false %>
   <strong>Windows:</strong>
   <%= @project.windows %>
   <% end %>
 </p>
 
-<p> <% if !@project.window_type == nil || false %>
+<p> <% unless @project.window_type == "" %>
   <strong>Window type:</strong>
   <%= @project.window_type %>
   <% end %>
 </p>
 
-<p> <% if !@project.quantity == nil || false %>
+<p> <% unless @project.quantity == nil %>
   <strong>Quantity:</strong>
   <%= @project.quantity %>
   <% end %>
 </p>
 
-<p> <% if !@project.electrical == nil || false %>
+<p> <% unless @project.electrical == false %>
   <strong>Electrical:</strong>
   <%= @project.electrical %>
   <% end %>
 </p>
 
-<p> <% if !@project.plumbing == nil || false %>
+<p> <% unless @project.plumbing == false %>
   <strong>Plumbing:</strong>
   <%= @project.plumbing %>
   <% end %>
 </p>
 
-<p> <% if !@project.handy_man == nil || false %>
+<p> <% unless @project.handy_man == false %>
   <strong>Handy man:</strong>
   <%= @project.handy_man %>
   <% end %>
