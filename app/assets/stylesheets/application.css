@@ -18,6 +18,10 @@
 
  html {
    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/30/26/fc/3026fc38c7752935f9f9a6aa710ea6d1.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   margin: 0;
+   padding: 0;
  }
 
  @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
