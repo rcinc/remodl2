@@ -50,7 +50,7 @@ width:95%;
   color: $base;
   height: 50px;
   background: black;
-  background:rgba(0, 0, 0, .5);
+  background:rgba(0, 0, 0);
   border-bottom: solid 1px black;
 }
 
@@ -82,7 +82,7 @@ margin-top: 20%
   margin-right: 2%;
   min-width:250px;
   height: auto;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0);
   text-align: center;
   overflow:hidden;
 
@@ -101,7 +101,7 @@ margin-top: 20%
   position:relative;
   font-size: 1.4em;
   width:100%;
-  background:rgba(255, 255, 255, .13);
+  background:rgba(255, 255, 255);
   padding: 25px 0;
   border-bottom: solid 1px;
 }
@@ -141,7 +141,7 @@ color: $blue;
   margin-left: 40%;
 }
 .pp img {
-  box-shadow: 5px 3px 5px rgba(0,0,0,.3);
+  box-shadow: 5px 3px 5px rgba(0,0,0);
 }
 .editpro{
   text-align: center;
@@ -150,13 +150,13 @@ color: $blue;
 }
 
 .newprocontainer {
-  background-color: rgba(250,250,250, 0.7);
-  border: 1px solid rgba(255,255, 255,1);
+  background-color: rgba(250,250,250);
+  border: 1px solid rgba(255,255, 255);
   text-align: center;
   margin-left: 25%;
   margin-right: 25%;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  box-shadow: 0 3px 3px rgba(40,40,40,0.9);
+  box-shadow: 0 3px 3px rgba(40,40,40);
 }

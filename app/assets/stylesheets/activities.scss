@@ -55,7 +55,7 @@ h1{
   left: 0px;
   z-index: 60;
   transition: margin-left 0.3s;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 2px rgba(0,0,0);
 }
 .nav .centered{
   padding: 12px 0 12px 95px;
@@ -115,7 +115,7 @@ h1{
   height: 48px;
   background: #E53935;
   z-index: 50;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 2px rgba(0,0,0);
   transition: 0.3s;
   padding:top;
 }
@@ -174,7 +174,7 @@ h1{
   margin: 10px;
   height: 180px;
   background:white;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 2px rgba(0,0,0);
   font-family: 'Roboto', san-serif;
   font-weight: 700;
   font-size: 12px;
@@ -189,7 +189,7 @@ h1{
   z-index: 10;
   right: -100%;
   top: 68px;
-  box-shadow: -1px 3px 5px rgba(0,0,0,0.2);
+  box-shadow: -1px 3px 5px rgba(0,0,0);
   transition: 0.4s;
 }
 
@@ -217,7 +217,7 @@ h1{
   margin-bottom: 10px;
   background: white;
   padding-left: -100px;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 2px rgba(0,0,0);
   transition:  0.7s;
 
 }
@@ -233,7 +233,7 @@ h1{
   float: left;
   background-image: url('https://lh3.googleusercontent.com/-Az9OhFIaxEY/AAAAAAAAAAI/AAAAAAAAAAA/iHtDLHxQMFc/photo.jpg');
   background-size: 55px 55px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 2px rgba(0,0,0);
 }
 .feed-item .text-holder{
   margin-top: 22px;
@@ -285,7 +285,7 @@ h1{
   float: right;
   bottom: 15px;
   right: 15px;
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0);
   text-align:center;
   cursor: pointer;
   color: #FFF;
@@ -312,7 +312,7 @@ h2{
   background: #EDEDED;
   margin: 10% auto;
   padding: 20px;
-  box-shadow: 0px 3px 10px rgba(0,0,0,0.4);
+  box-shadow: 0px 3px 10px rgba(0,0,0);
   z-index: -2;
   position: fixed;
   top: 0;
@@ -326,7 +326,7 @@ h2{
   width: 50%;
   background: #FFF;
   padding: 20px;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 2px rgba(0,0,0);
   z-index: 2;
 }
 #spacer, #spacertwo{
@@ -340,7 +340,7 @@ h2{
   padding: 20px;
   height: 100%;
   width: 47.5%;
-  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: 0px 1px 2px rgba(0,0,0);
   z-index: 2;
 
 }
