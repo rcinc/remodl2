@@ -2,7 +2,8 @@
 <p id="notice"><%= notice %></p>
 <div class="profileshowphoto">
 <p>
-  <%= image_tag @project.url1 %>
+  <%= image_tag @project.main.url(:square) %>
+
 </p><br><br><br>
 </div>
 <div class="profileshowtext">
