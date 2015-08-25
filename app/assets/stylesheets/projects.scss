@@ -10,7 +10,7 @@ $COLOR_BLACK: #000000;
 
 html {
   background: url(http://i.imgur.com/kyIYGDZ.png);
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  // font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
   /* position and height for footer */
   position: relative;
   min-height: 100%;
@@ -234,6 +234,8 @@ box styles as a container item
 
 .totem-hd {
   color: black;
+  font-family: "Nunito", sans-serif;
+
   font-weight: bold;
 }
 
@@ -303,7 +305,7 @@ footer styles
 
 
 .flat{
-  padding: 19px 39px 18px 39px;
+  padding: 19px 9px 19px 9px;
   color: #FFF;
   background-color: #4bc970;
   font-size: 16px;
