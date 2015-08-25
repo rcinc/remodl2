@@ -240,7 +240,6 @@ h1.projectstitle {
 }
 
 .signupp {
-  background-image: url("http://duckettbrosproperties.com/files/uploads/2014/07/unsplash-beach-house.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
@@ -249,7 +248,7 @@ h1.projectstitle {
 }
 
 .profilename12 {
-  float: right;
+  float: right
 }
 .facebooklogin {
   margin-left: 27%;
