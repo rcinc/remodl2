@@ -6,6 +6,9 @@
 <!-- <div class="header-container">
 <div class="header wrapper"><h1>Dashboard</h1></div> -->
   <div class="pp">
+    <%#= image_tag @profile.attachment.inspect %>
+    <%= image_tag @profile.attachment.url(:square) %>
+
     <% if current_user.profile.picture == "" %>
       <%= image_tag "http://www.mathblogging.org/images/icons/default-avatar.jpg" %>
     <% else %>

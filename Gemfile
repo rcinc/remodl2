@@ -13,6 +13,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+gem 'aws-sdk', '<2.0'
+gem 'paperclip'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'devise'
@@ -40,8 +43,9 @@ gem 'public_activity'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'rails_12factor'
-group :development, :test do
+
+  gem 'rails_12factor'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
