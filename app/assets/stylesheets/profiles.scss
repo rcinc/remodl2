@@ -71,11 +71,11 @@ margin-top: 20%
 
 .block {
   // margin-left: 3%;
-  left: 9%;
+  left: 7%;
   float:left;
-  margin-top:5%;
+  margin-top:3%;
   position:relative;
-  background: black;
+  background:white;
   color: $base;
   width: 18.85%;
   margin-right: 2%;
@@ -87,7 +87,7 @@ margin-top: 20%
 
   -webkit-backface-visibility: hidden;
   max-width: 20%;
-  border:solid 1px #000;
+  border:solid 2px #4bc970;
 }
 
 .block:hover {
@@ -95,14 +95,16 @@ margin-top: 20%
   // margin-left: 2%;
 }
 
-.heading {
+.heading1 {
   height:30px;
   position:relative;
   font-size: 1.4em;
   width:100%;
-  background:rgb(255, 255, 255);
+  background:#4bc970;
   padding: 25px 0;
-  border-bottom: solid 1px;
+  padding-bottom: 30px;
+  border-bottom: solid 1px #4bc970;
+  color: white;
 }
 
 .num {
@@ -112,34 +114,36 @@ padding-top: 40px;
 }
 
 .green {
-  font-family: 'Open Sans', sans-serif;
-color: $green;
+  font-family: 'Nunito', sans-serif;
+color: #4bc970;
+// background: #4bc970;
 }
 
 .orange {
-font-family: 'Open Sans', sans-serif;
-color: $orange;
+font-family: 'Nunito', sans-serif;
+color: #4bc970;
 }
 
 .purple {
-font-family: 'Open Sans', sans-serif;
-color: $purple;
+font-family: 'Nunito', sans-serif;
+color: #4bc970;
 }
 
 .yellow {
-font-family: 'Open Sans', sans-serif;
-color: $yellow;
+font-family: 'Nunito', sans-serif;
+color: #4bc970;
 }
 
 .blue {
-font-family: 'Open Sans', sans-serif;
-color: $blue;
+font-family: 'Nunito', sans-serif;
+color:#4bc970;
 }
 .pp {
   margin-top: 5%;
-  margin-left: 40%;
+  margin-left: 42%;
   width: 250px;
   height: 250px;
+  margin-bottom: -2%;
 }
 .pp img {
   // box-shadow: 5px 3px 5px rgb(0,0,0);

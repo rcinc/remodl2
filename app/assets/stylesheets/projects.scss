@@ -233,17 +233,17 @@ box styles as a container item
 .totem > * { margin-bottom: 10px; }
 
 .totem-hd {
-  color: $COLOR_MAIN;
+  color: black;
   font-weight: bold;
 }
 
 .totem-bd {
-  color: $COLOR_BLACK;
+  color: black;
   font-weight: bold;
 }
 
 .totem-ft {
-  color: $COLOR_SECONDARY;
+  color: black;
 }
 
 /*------------------------------
@@ -306,16 +306,17 @@ footer styles
   padding: 19px 39px 18px 39px;
   color: #FFF;
   background-color: #4bc970;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
-  width: 25%;
-  border: 1px solid #3ac162;
+  width: 12%;
+  // border: 1px solid #3ac162;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
   margin-bottom: 10px;
-  margin-left: 37.5%;
+  margin-left: 44%;
+  margin-top: 2%;
 
 }
 

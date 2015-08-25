@@ -127,6 +127,21 @@ https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm
   background: #ffffff;
   opacity: .5;
 }
+
+a {
+  font-family: "Nunito", sans-serif;
+}
+
+a:active {
+  color: black;
+  font-family: "Nunito", sans-serif;
+}
+
+a:visited {
+  color: black;
+  font-family: "Nunito", sans-serif;
+}
+
 #cssmenu ul li a:before {
   content: "";
   display: block;
