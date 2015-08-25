@@ -27,6 +27,12 @@
   <button type="submit">
     Sign Up!
   </button>
+
+  <div class="facebooklogin">
+  <%= link_to user_omniauth_authorize_path(:facebook) do %>
+  <%= image_tag ('facebooklogin.png') %>
+  <%end%>
+  </div>
 <% end %>
 <%= render "devise/shared/links" %>
 </div>
