@@ -14,10 +14,23 @@
  *= require_self
  */
 
+/*https://images.unsplash.com/photo-1431184052543-809fa8cc9bd6?fit=crop&fm=jpg&h=800&q=80&w=1050
+https://images.unsplash.com/photo-1430126833726-4a091c572f3c?fit=crop&fm=jpg&h=750&q=80&w=1050
+https://images.unsplash.com/photo-1422189668989-08f214d6e419?fit=crop&fm=jpg&h=1275&q=80&w=950
+https://unsplash.imgix.net/reserve/NxxLccbqQdGtNc7xJ43e_ancestral-home.jpg?fit=crop&fm=jpg&h=550&q=75&w=950
+https://images.unsplash.com/reserve/GOMY9CQSvmjKLxigsfxg_Attic.jpg?fit=crop&fm=jpg&h=625&q=80&w=950
+https://ununsplash.imgix.net/photo-1417870839255-a23faa90c6b0?fit=crop&fm=jpg&h=650&q=75&w=950
+https://unsplash.imgix.net/photo-1415226605610-f53c5c1ea8e9?fit=crop&fm=jpg&h=1275&q=75&w=950
+https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm=jpg&h=650&q=80&w=950*/
+
 
 
  html {
+   /*background: #333;*/
    background: rgb(225,225,225);
+   background-repeat: no-repeat;
+   margin: 0;
+   padding: 0;
  }
 
  @import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
@@ -172,12 +185,29 @@
 
  div img {
     width:auto;
-    max-width:30%;
+    max-width:100%;
     height:auto;
     margin-left: 0 auto;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+.icon img {
+max-width: 55px;
+height: 55px;
+border-radius: 150px;
+-webkit-border-radius: 150px;
+-moz-border-radius: 150px;
+}
+
+.projectpic1 {
+   width:auto;
+   max-width:12%;
+   height:auto;
+   margin-left: 0 auto;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
 }
 
 img {
@@ -209,21 +239,11 @@ h1.projectstitle {
     background: #2c2c2c;
 }
 
-.regcontainer {
-  background-color: rgb(250,250,250);
-  border: 1px solid rgb(255,255,255);
-  text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  box-shadow: 0 3px 3px rgb(40,40,40);
-}
+.signupp {
+  background-image: url("https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm=jpg&h=650&q=80&w=950");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1000px;
 
-.signupheader {
-  text-align: center;
-  color: black;
-  font-size: 22px;
-  margin-top: 3%;
 }

@@ -16,7 +16,6 @@
 }
 
 body {
-  //  background-image: url("http://pre07.deviantart.net/0bdd/th/pre/f/2007/185/5/7/wood_wallpaper_by_stenosis.jpg");
    background-size: cover;
    background-repeat: no-repeat;
    margin: 0;
@@ -139,24 +138,9 @@ color: $blue;
 .pp {
   margin-top: 5%;
   margin-left: 40%;
+  width: 250px;
+  height: 250px;
 }
 .pp img {
-  box-shadow: 5px 3px 5px rgb(0,0,0);
-}
-.editpro{
-  text-align: center;
-  margin-top: 3%;
-  margin-right: 2%;
-}
-
-.newprocontainer {
-  background-color: rgb(250,250,250);
-  border: 1px solid rgb(255,255,255);
-  text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  box-shadow: 0 3px 3px rgb(40,40,40);
+  // box-shadow: 5px 3px 5px rgb(0,0,0);
 }
