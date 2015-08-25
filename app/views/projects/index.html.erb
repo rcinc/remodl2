@@ -55,11 +55,11 @@
           </div>
         </div>
         <div class="split-right">
-          <% if p.main.url == "" %>
+          <% if p.main.url(:square) == "" %>
         <div class="projectpic1">
           <%= image_tag "http://www.medillnews847.com/madeinchicago/midwife/img/home.png" %>
           <% else %>
-        <div class="projectpic"> <%= link_to image_tag p.main.url%></div>
+        <div class="projectpic"> <%= link_to image_tag p.main.url(:square)%></div>
           <% end %>
         </div>
         </div>
