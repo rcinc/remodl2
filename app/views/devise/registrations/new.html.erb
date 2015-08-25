@@ -1,6 +1,6 @@
 
 <body class="signupp"
-<h2 class="signupheader">Sign up</h2>
+<h2 class="signupheader"></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -24,9 +24,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <button type="submit">
+    Sign Up!
+  </button>
 
-  <div class="actions"4>
-    <%= f.submit "Sign up"  %>
+  <div class="facebooklogin">
+  <%= link_to user_omniauth_authorize_path(:facebook) do %>
+  <%= image_tag ('facebooklogin.png') %>
+  <%end%>
   </div>
 <% end %>
 <%= render "devise/shared/links" %>
