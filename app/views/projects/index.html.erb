@@ -23,7 +23,7 @@
     <li class="subNav-list-item"><a class="subNav-list-item-link subNav-list-item-link_active" href="#">Trending</a></li>
     <li class="subNav-list-item"><a class="subNav-list-item-link" href="#">Expired</a></li>
   </ul>
-</div><!-- end subNav --> 
+</div><!-- end subNav -->
 <button class="flat up"><% @users.each do |user| %>
 <% if user.id == current_user.try(:id) && user.profile != nil && user.profile.vendor == false %>
 <%= link_to 'New Project', new_project_path %>
@@ -71,14 +71,7 @@
 <% end %>
 
 
-<div class="footer">
-  <div class="split">
-    <div class="split-left">
-      <small>&#169; 2015 Remodl</small>
-    </div>
 
-  </div>
-</div>
 
 <p id="notice"><%= notice %></p>
 <body class="projectbody">
