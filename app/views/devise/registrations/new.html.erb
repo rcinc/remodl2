@@ -24,9 +24,9 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
-  <button type="submit">
-    Sign Up!
-  </button>
+<div class="actions">
+  <%= f.submit "sign up" %>
+</div>
 
   <div class="facebooklogin">
   <%= link_to user_omniauth_authorize_path(:facebook) do %>
