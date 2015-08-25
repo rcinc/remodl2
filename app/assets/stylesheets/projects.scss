@@ -60,7 +60,6 @@ masthead styles
   display: inline-block;
   height: 32px;
   width: 30px;
-  background: url(http://i.imgur.com/YQddQYV.png) no-repeat -30px 0;
 }
 
 .masthead-hd-logo-link-icon_hand:hover {
@@ -79,7 +78,6 @@ icon styles
   display: inline-block;
   height: 32px;
   width: 30px;
-  background: url(http://i.imgur.com/YQddQYV.png) no-repeat;
 }
 
 .icon:hover { cursor: pointer; }
@@ -128,15 +126,22 @@ split styles
 statusBar styles
 -------------------------------*/
 .statusBar {
-  padding: 3px 10px;
+  // padding: 3px 10px;
   background: #2fa2ad;
   color: $COLOR_WHITE;
   box-shadow: 0 0 3px $COLOR_GRAY;
   /*position and z-index for box-shadow*/
   position: relative;
   z-index: 2;
+  height: 57px;
 }
 
+.split-left {
+  >p {
+    margin-left: 10%;
+    margin-bottom: 8%;
+  }
+}
 .projectim {
   max-width: 30%;
   float: right;
@@ -298,16 +303,20 @@ footer styles
 
 
 .flat{
-  background:transparent;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
   text-align: center;
-  color:#37F;
-  border:none;
-  padding:10px 30px;
-  border-radius:20px;
-  box-shadow:0 0 0 1px #37F inset;
-  outline:none;
-  font-weight:normal;
-  -webkit-transition:all 200ms ease-out;
+  font-style: normal;
+  border-radius: 5px;
+  width: 25%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+  margin-left: 37.5%;
+
 }
 
 .flat:hover{
@@ -390,6 +399,31 @@ input[type="checkbox"] {
   margin: 0 4px 8px 0;
 }
 
+.vendor input[type="checkbox"] {
+    margin-right: 3%;
+}
+.categories input[type="checkbox"] {
+    margin-right: 3%;
+}
+
+.flexbox {
+  display: flex;
+}
+.container1 {
+  flex: 1 0 0;
+}
+
+.container2 {
+  flex: 1 0 0;
+}
+.container3 {
+  flex: 1 0 0;
+}
+
+.please {
+    margin-bottom: 5%;
+}
+
 select {
   padding: 6px;
   height: 32px;
@@ -431,6 +465,38 @@ label.light {
   display: inline;
 }
 
+.search form {
+  background: none;
+  width: 30%;
+  display: inline;
+  margin-right: 2%;
+  margin-top: .8%;
+
+  input#term {
+    width: 16%;
+    height: 37px;
+    border-radius: 3px;
+    margin-top: 10px;
+  }
+}
+
+input[type="submit"] {
+    border: none;
+    -webkit-border-radius: 3;
+    -moz-border-radius: 3;
+    border-radius: 3px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 11px;
+    background: #333;
+    padding: 10px 10px 9px 10px;
+    text-decoration: none;
+    height: 39px;
+    margin-left: 6px;
+}
+
+
+
 .number {
   background-color: #5fcf80;
   color: #fff;
@@ -444,6 +510,7 @@ label.light {
   text-shadow: 0 1px 0 rgba(255,255,255,0.2);
   border-radius: 100%;
 }
+
 
 @media screen and (min-width: 480px) {
 
