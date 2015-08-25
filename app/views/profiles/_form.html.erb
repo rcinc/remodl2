@@ -27,43 +27,45 @@
   <%= f.file_field :attachment %>
 </div>
 
-  <div class="field">
-    <%= f.label :bio %><br>
-    <%= f.text_area :bio %>
-  </div>
-  <div class="vendor">
-    <%= f.label :vendor%><br>
-    <%= f.check_box :vendor%>
-  </div>
-  <div id="company" style="display:none;">
-    <%= f.label :company %><br>
-    <%= f.text_area :company  %>
-  </div>
-  <div id="address" style="display:none;">
-      <%= f.label :address %><br>
-      <%= f.text_area :address %>
-  </div>
-  <div id="phone" style="display:none;">
-    <%= f.label :phone %><br>
-    <%= f.text_area :phone %>
-  </div>
-  <div id="lict" style="display:none;">
-    <%= f.label :license_type %><br>
-    <%= f.text_area :license_type %>
-  </div>
-  <div id="licn" style="display:none;">
-    <%= f.label :license_number %><br>
-    <%= f.text_area :license_number %>
+
+<div class="field">
+  <%= f.label :bio %><br>
+  <%= f.text_area :bio %>
+</div>
+<div class="vendor">
+  <%= f.label :vendor%><br>
+  <%= f.check_box :vendor%>
+</div>
+<div id="company" style="display:none;">
+  <%= f.label :company %><br>
+  <%= f.text_area :company  %>
+</div>
+<div id="address" style="display:none;">
+    <%= f.label :address %><br>
+    <%= f.text_area :address %>
+</div>
+<div id="phone" style="display:none;">
+  <%= f.label :phone %><br>
+  <%= f.text_area :phone %>
+</div>
+<div id="lict" style="display:none;">
+  <%= f.label :license_type %><br>
+  <%= f.text_area :license_type %>
+</div>
+<div id="licn" style="display:none;">
+  <%= f.label :license_number %><br>
+  <%= f.text_area :license_number %>
+</div>
+<br>
+<br>
+<div class="field vendor">
+  <%= f.label :Deactive_Profile %>
+  <%= f.check_box :deactivate %>
+</div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
   </div>
 
-  <br>
-  <br>
-  <div class="field vendor">
-    <%= f.label :Deactive_Profile %>
-    <%= f.check_box :deactivate %>
-  </div>
-  <button type="submit">
-    Done
-  </button>
 <% end %>
 </div>
