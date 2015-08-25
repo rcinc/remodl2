@@ -12,7 +12,7 @@
     <% if current_user.profile.attachment.nil? %>
       <%= image_tag "http://www.mathblogging.org/images/icons/default-avatar.jpg" %>
     <% else %>
-      <%= image_tag current_user.profile.attachment.url(:square) %>
+      <%= image_tag current_user.profile.attachment.url%>
     <% end %>
   </div>
   <div class="editpro" style= text-align:center>

@@ -38,8 +38,8 @@
         <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
       <% end %>
   </li>
-   <li> <% if user_signed_in? && current_user.profile && current_user.profile.name != nil%>
-   <strong class="login">Hi<%= link_to current_user.profile.name, current_user.profile %></strong>
+   <li class="profilename12"><% if user_signed_in? && current_user.profile && current_user.profile.name != nil%>
+   <%= link_to current_user.profile.name, current_user.profile %>
    <% end %>
 </li>
 </ul>
@@ -48,7 +48,7 @@
 
 </head>
 <body>
-  
+
   <p class="alert"><%= alert %></p>
 
 

@@ -27,10 +27,10 @@
 
                 <div class="icon-holder">
                   <div class="icon">
-                    <% if activity.owner.profile.picture == "" %>
+                    <% if activity.owner.profile.attachment.url.nil? %>
                     <%= image_tag "http://www.mathblogging.org/images/icons/default-avatar.jpg" %>
                     <% else %>
-                    <%= image_tag activity.owner.profile.picture %>
+                    <%= image_tag activity.owner.profile.attachment.url %>
                     <% end %></div></div>
                 <div class="text-holder col-3-5">
                   <%= link_to activity.owner.profile.name, profile_path(activity.owner_id) %>
@@ -59,7 +59,7 @@
       </div><!--end of filters-->
 
 
-  
+
 
 
    <div id="activityform">
