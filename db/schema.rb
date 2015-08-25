@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150823153354) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
     t.string   "trackable_type"
@@ -26,9 +29,9 @@ ActiveRecord::Schema.define(version: 20150823153354) do
     t.datetime "updated_at"
   end
 
-  add_index "activities", ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type"
-  add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type"
-  add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
+  add_index "activities", ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type", using: :btree
+  add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type", using: :btree
+  add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type", using: :btree
 
   create_table "bids", force: :cascade do |t|
     t.integer  "bid"
@@ -39,8 +42,8 @@ ActiveRecord::Schema.define(version: 20150823153354) do
     t.boolean  "accepted",   default: false
   end
 
-  add_index "bids", ["project_id"], name: "index_bids_on_project_id"
-  add_index "bids", ["user_id"], name: "index_bids_on_user_id"
+  add_index "bids", ["project_id"], name: "index_bids_on_project_id", using: :btree
+  add_index "bids", ["user_id"], name: "index_bids_on_user_id", using: :btree
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -50,8 +53,8 @@ ActiveRecord::Schema.define(version: 20150823153354) do
     t.datetime "updated_at", null: false
   end
 
-  add_index "comments", ["project_id"], name: "index_comments_on_project_id"
-  add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+  add_index "comments", ["project_id"], name: "index_comments_on_project_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "downvotes", force: :cascade do |t|
     t.integer  "profile_id"
@@ -75,7 +78,7 @@ ActiveRecord::Schema.define(version: 20150823153354) do
     t.string   "license_number"
   end
 
-  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -133,7 +136,7 @@ ActiveRecord::Schema.define(version: 20150823153354) do
     t.boolean  "closed",             default: false
   end
 
-  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id", using: :btree
 
   create_table "reviews", force: :cascade do |t|
     t.text     "reviews"
@@ -143,8 +146,8 @@ ActiveRecord::Schema.define(version: 20150823153354) do
     t.integer  "project_id"
   end
 
-  add_index "reviews", ["project_id"], name: "index_reviews_on_project_id"
-  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+  add_index "reviews", ["project_id"], name: "index_reviews_on_project_id", using: :btree
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -165,8 +168,8 @@ ActiveRecord::Schema.define(version: 20150823153354) do
     t.string   "name"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "votes", force: :cascade do |t|
     t.integer  "profile_id"
@@ -174,4 +177,12 @@ ActiveRecord::Schema.define(version: 20150823153354) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bids", "projects"
+  add_foreign_key "bids", "users"
+  add_foreign_key "comments", "projects"
+  add_foreign_key "comments", "users"
+  add_foreign_key "profiles", "users"
+  add_foreign_key "projects", "users"
+  add_foreign_key "reviews", "projects"
+  add_foreign_key "reviews", "users"
 end
