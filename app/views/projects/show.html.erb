@@ -2,7 +2,7 @@
 <p id="notice"><%= notice %></p>
 <div class="profileshowphoto">
 <p>
-  <%= image_tag @project.main.url(:square) %>
+  <%= image_tag @project.main.url %>
 
 </p><br><br><br>
 </div>
@@ -49,24 +49,7 @@
   <span>in </span><%= @project.ends %><span> days</span>
   <% end %>
 </p>
-<p>
-  <% unless @project.url2 == "" %>
-  <strong>Url2</strong><br>
-  <%= @project.url2 %>
-  <% end %>
-</p>
 
-<p>  <% unless @project.url3 == "" %>
-  <strong>Url3</strong><br>
-  <%= @project.url3 %>
-  <% end %>
-</p>
-
-<p>  <% unless @project.url4 == "" %>
-  <strong>Url4</strong><br>
-  <%= @project.url4 %>
-    <% end %>
-</p>
 
 
 <p>  <% unless @project.kitchen == nil %>
