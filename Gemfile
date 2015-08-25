@@ -44,6 +44,7 @@ gem 'public_activity'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+  gem 'dotenv-rails', :groups => [:development, :test]
   gem 'rails_12factor'
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -7,15 +7,15 @@
 <div class="header wrapper"><h1>Dashboard</h1></div> -->
   <div class="pp">
     <%#= image_tag @profile.attachment.inspect %>
-    <%= image_tag @profile.attachment.url(:square) %>
 
-    <% if current_user.profile.picture == "" %>
+
+    <% if current_user.profile.attachment.nil? %>
       <%= image_tag "http://www.mathblogging.org/images/icons/default-avatar.jpg" %>
     <% else %>
-      <%= image_tag current_user.profile.picture %>
+      <%= image_tag current_user.profile.attachment.url(:square) %>
     <% end %>
   </div>
-  <div class="editpro">
+  <div class="editpro" style= text-align:center>
   <%= link_to 'Edit', edit_profile_path(@profile) %>
   </div>
 

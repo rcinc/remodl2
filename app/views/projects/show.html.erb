@@ -1,300 +1,313 @@
+<div class="profileshowcontainer">
 <p id="notice"><%= notice %></p>
-
-
+<div class="profileshowphoto">
 <p>
-  <strong>Main Photo:</strong>
   <%= image_tag @project.url1 %>
-</p>
-
+</p><br><br><br>
+</div>
+<div class="profileshowtext">
 <p>
-  <strong>Title:</strong>
+  <% unless @project.title == "" %>
+  <strong>Title:</strong><br>
   <%= @project.title %>
-
+  <% end %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <% unless @project.description == "" %>
+  <strong>Description</strong><br>
   <%= @project.description %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Budget:</strong>
+  <% unless @project.budget == nil %>
+  <strong>Budget</strong><br>
   $<%= @project.budget %>
+  <% end %>
 </p>
 
 
 <p>
-  <strong>Created:</strong>
+  <% unless @project.created_at == nil %>
+  <strong>Created</strong><br>
   <%= @project.created_at.strftime("%B %d, %Y") %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Location city:</strong>
+  <% unless @project.location_city == "" %>
+  <strong>Location city</strong><br>
   <%= @project.location_city %>
+  <% end %>
 </p>
 
 <p>
-  <strong>Ends:</strong>
+  <% unless @project.ends == "" %>
+  <strong>Ends</strong><br>
   <span>in </span><%= @project.ends %><span> days</span>
+  <% end %>
 </p>
 <p>
   <% unless @project.url2 == "" %>
-  <strong>Url2:</strong>
+  <strong>Url2</strong><br>
   <%= @project.url2 %>
   <% end %>
 </p>
 
 <p>  <% unless @project.url3 == "" %>
-  <strong>Url3:</strong>
+  <strong>Url3</strong><br>
   <%= @project.url3 %>
   <% end %>
 </p>
 
 <p>  <% unless @project.url4 == "" %>
-  <strong>Url4:</strong>
+  <strong>Url4</strong><br>
   <%= @project.url4 %>
     <% end %>
 </p>
 
 
-<p>  <% unless @project.kitchen == false %>
-  <strong>Kitchen:</strong>
+<p>  <% unless @project.kitchen == nil %>
+  <strong>Kitchen</strong><br>
   <%= @project.kitchen %>
   <% end %>
 </p>
 
 
-<p>  <% unless @project.sqft == nil %>
-  <strong>Sqft:</strong>
+<p>  <% unless @project.sqft == "" %>
+  <strong>Sqft</strong><br>
   <%= @project.sqft %>
   <% end %>
 </p>
 
 
 <p>  <% unless @project.number_of_cabinets == nil %>
-  <strong>Number of cabinets:</strong>
+  <strong>Number of cabinets </strong><br>
   <%= @project.number_of_cabinets %>
   <% end %>
 </p>
 
 <p> <% unless @project.countertop_style == "" %>
-  <strong>Countertop style:</strong>
+  <strong>Countertop style</strong><br>
   <%= @project.countertop_style %>
   <% end %>
 </p>
 
 
 <p> <% unless @project.counter_top_length == nil %>
-  <strong>Counter top length:</strong>
+  <strong>Counter top length</strong><br>
   <%= @project.counter_top_length %>
   <% end %>
 </p>
 
 
 <p> <% unless @project.number_of_outlets == nil %>
-  <strong>Number of outlets:</strong>
+  <strong>Number of outlets</strong><br>
   <%= @project.number_of_outlets %>
   <% end %>
 </p>
 
 <p> <% unless @project.light_fixture_type == "" %>
-  <strong>Light fixture type:</strong>
+  <strong>Light fixture type</strong><br>
   <%= @project.light_fixture_type %>
   <% end %>
 </p>
 
 <p> <% unless @project.floor_sqft ==  nil %>
-  <strong>Floor sqft:</strong>
+  <strong>Floor sqft</strong><br>
   <%= @project.floor_sqft %>
   <% end %>
 </p>
 
 <p> <% unless @project.floor_type ==  "" %>
-  <strong>Floor type:</strong>
+  <strong>Floor type</strong><br>
   <%= @project.floor_type %>
   <% end %>
 </p>
 
-<p> <% unless @project.bath == false %>
-  <strong>Bath:</strong>
+<p> <% unless @project.bath == nil %>
+  <strong>Bath</strong><br>
   <%= @project.bath %>
   <% end %>
 </p>
 
 <p> <% unless @project.vanity_width == nil %>
-  <strong>Vanity width:</strong>
+  <strong>Vanity width</strong><br>
   <%= @project.vanity_width %>
   <% end %>
 </p>
 
 <p> <% unless @project.tub_length == nil %>
-  <strong>Tub length:</strong>
+  <strong>Tub length</strong><br>
   <%= @project.tub_length %>
   <% end %>
 </p>
 
 <p> <% unless @project.shower_sqft == nil %>
-  <strong>Shower sqft:</strong>
+  <strong>Shower sqft</strong><br>
   <%= @project.shower_sqft %>
   <% end %>
 </p>
 
 <p> <% unless @project.mirror == "" %>
-  <strong>Mirror:</strong>
+  <strong>Mirror</strong><br>
   <%= @project.mirror %>
   <% end %>
 </p>
 
 <p> <% unless @project.bath_fan == "" %>
-  <strong>Bath fan:</strong>
+  <strong>Bath fan</strong><br>
   <%= @project.bath_fan %>
   <% end %>
 </p>
 
-<p> <% unless @project.air_conditioning == false %>
-  <strong>Air conditioning:</strong>
+<p> <% unless @project.air_conditioning == nil %>
+  <strong>Air conditioning</strong><br>
   <%= @project.air_conditioning %>
   <% end %>
 </p>
 
 <p> <% unless @project.ac_type == "" %>
-  <strong>Ac type:</strong>
+  <strong>Ac type</strong><br>
   <%= @project.ac_type %>
   <% end %>
 </p>
 
 <p> <% unless @project.home_sqft == nil %>
-  <strong>Home sqft:</strong>
+  <strong>Home sqft</strong><br>
   <%= @project.home_sqft %>
   <% end %>
 </p>
 
 <p> <% unless @project.ac_size == nil %>
-  <strong>Ac size:</strong>
+  <strong>Ac size</strong><br>
   <%= @project.ac_size %>
   <% end %>
 </p>
 
 <p> <% unless @project.duct_work == "" %>
-  <strong>Duct work:</strong>
+  <strong>Duct work</strong><br>
   <%= @project.duct_work %>
   <% end %>
 </p>
 
-<p> <% unless @project.roof == false %>
-  <strong>Roof:</strong>
+<p> <% unless @project.roof == nil %>
+  <strong>Roof</strong><br>
   <%= @project.roof %>
   <% end %>
 </p>
 
-<p> <% unless @project.exterior_general == false %>
-  <strong>Exterior general:</strong>
+<p> <% unless @project.exterior_general == nil %>
+  <strong>Exterior general</strong><br>
   <%= @project.exterior_general %>
   <% end %>
 </p>
 
 <p> <% unless @project.more_detail == "" %>
-  <strong>More detail:</strong>
+  <strong>More detail</strong><br>
   <%= @project.more_detail %>
   <% end %>
 </p>
 
-<p> <% unless @project.paint == false %>
-  <strong>Paint:</strong>
+<p> <% unless @project.paint == nil %>
+  <strong>Paint</strong><br>
   <%= @project.paint %>
   <% end %>
 </p>
 
-<p> <% unless @project.floor == false %>
-  <strong>Floor:</strong>
+<p> <% unless @project.floor == nil %>
+  <strong>Floor</strong><br>
   <%= @project.floor %>
   <% end %>
 </p>
 
 <p> <% unless @project.floor_demo == "" %>
-  <strong>Floor demo:</strong>
+  <strong>Floor demo</strong><br>
   <%= @project.floor_demo %>
   <% end %>
 </p>
 
 
-<p> <% unless @project.pool == false %>
-  <strong>Pool:</strong>
+<p> <% unless @project.pool == nil %>
+  <strong>Pool</strong><br>
   <%= @project.pool %>
 </p>
 <% end %>
 
-<p> <% unless @project.drive_way == false %>
-  <strong>Drive way:</strong>
+<p> <% unless @project.drive_way == nil %>
+  <strong>Drive way</strong><br>
   <%= @project.drive_way %>
   <% end %>
 </p>
 
 <p> <% unless @project.length == nil %>
-  <strong>Length:</strong>
+  <strong>Length</strong><br>
   <%= @project.length %>
   <% end %>
 </p>
 
 <p> <% unless @project.width == nil %>
-  <strong>Width:</strong>
+  <strong>Width</strong><br>
   <%= @project.width %>
   <% end %>
 </p>
 
-<p> <% unless @project.landscaping == false %>
-  <strong>Landscaping:</strong>
+<p> <% unless @project.landscaping == nil %>
+  <strong>Landscaping</strong><br>
   <%= @project.landscaping %>
   <% end %>
 </p>
 
-<p> <% unless @project.fence == false %>
-  <strong>Fence:</strong>
+<p> <% unless @project.fence == nil %>
+  <strong>Fence</strong><br>
   <%= @project.fence %>
   <% end %>
 </p>
 
 <p> <% unless @project.fence_material == "" %>
-  <strong>Fence material:</strong>
+  <strong>Fence material</strong><br>
   <%= @project.fence_material %>
   <% end %>
 </p>
 
-<p> <% unless @project.windows == false %>
-  <strong>Windows:</strong>
+<p> <% unless @project.windows == nil %>
+  <strong>Windows</strong><br>
   <%= @project.windows %>
   <% end %>
 </p>
 
 <p> <% unless @project.window_type == "" %>
-  <strong>Window type:</strong>
+  <strong>Window type</strong><br>
   <%= @project.window_type %>
   <% end %>
 </p>
 
 <p> <% unless @project.quantity == nil %>
-  <strong>Quantity:</strong>
+  <strong>Quantity</strong><br>
   <%= @project.quantity %>
   <% end %>
 </p>
 
-<p> <% unless @project.electrical == false %>
-  <strong>Electrical:</strong>
+<p> <% unless @project.electrical == nil %>
+  <strong>Electrical</strong><br>
   <%= @project.electrical %>
   <% end %>
 </p>
 
-<p> <% unless @project.plumbing == false %>
-  <strong>Plumbing:</strong>
+<p> <% unless @project.plumbing == nil %>
+  <strong>Plumbing</strong><br>
   <%= @project.plumbing %>
   <% end %>
 </p>
 
-<p> <% unless @project.handy_man == false %>
-  <strong>Handy man:</strong>
+<p>
+  <% unless @project.handy_man == nil %>
+  <strong>Handy man</strong><br>
   <%= @project.handy_man %>
   <% end %>
 </p>
+</div>
 <br>
 <br>
 <% if @project.closed %>
@@ -310,7 +323,7 @@ $<%= bid.bid %>
 <%= link_to 'Edit Your Bid', edit_bid_path(bid) %>
 <% end %>
 <br>
-Added on: <%= bid.created_at.strftime("%B %d, %Y") %>
+Added on: <%= bid.created_at.strftime("%B %d, %Y") %><br>
 <% if current_user == bid.project.user%>
 <%=  link_to 'Accept This Bid', closed_project_path(bid.project, bid_id: bid.id) %>
 </p>
@@ -319,20 +332,22 @@ Added on: <%= bid.created_at.strftime("%B %d, %Y") %>
 <% end %>
 <br>
 <br>
+
   <h3>Questions/Comments</h3>
 <% @project.comments.each do |comment| %> <p>
-<b>Posted by:</b><br><%=comment.user.email%><br>
-<b>Comment:</b><br><%= comment.body %><br>
+<b>Posted by</b><br><%=comment.user.email%><br>
+<b>Comment</b><br><%= comment.body %><br>
 </p>
 <% end %>
 <br>
 <br>
 
+
 <% if current_user && current_user.profile && current_user.profile.vendor? && @show_bid_form  %>
   <h3>Bid on this Project</h3>
   <%= form_for [@project, @bid] do |f| %>
     <div class="field">
-      <%= f.label :bid %><br>
+      <%= f.label bid %><br>
       <%= f.number_field :bid %>
     </div>
     <div class="actions">
@@ -342,6 +357,8 @@ Added on: <%= bid.created_at.strftime("%B %d, %Y") %>
 <% end %>
 
 <br>
+
+<div class="profilecomments">
 <% if current_user && current_user.profile %>
 <%= form_for [@project, @comment] do |f| %>
   <div class="field">
@@ -351,10 +368,11 @@ Added on: <%= bid.created_at.strftime("%B %d, %Y") %>
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
   <% end %>
   <% end %>
 <% if @project.user_id == current_user.try(:id) %>
 <%= link_to 'Click Here to Edit, Accept, or Close', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
-  
+
 <% end %>
