@@ -331,7 +331,7 @@ Added on: <%= bid.created_at.strftime("%B %d, %Y") %><br>
   <h3>Bid on this Project</h3>
   <%= form_for [@project, @bid] do |f| %>
     <div class="field">
-      <%= f.label bid %><br>
+      <%= f.label :bid %><br>
       <%= f.number_field :bid %>
     </div>
     <div class="actions">
