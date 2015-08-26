@@ -27,7 +27,7 @@ https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm
 
  html {
    /*background: #333;*/
-   background: rgb(225,225,225);
+   background-image: url("bluebg.jpg");
    background-repeat: no-repeat;
    margin: 0;
    padding: 0;
@@ -65,7 +65,7 @@ https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm
   padding: 0;
   margin: 0;
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mohave', sans-serif;
   text-transform: uppercase;
 
 }
@@ -77,7 +77,7 @@ https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm
 }
 .login{
   color: white;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito', sans-serif;
   position: relative;
   left: 450px;
   max-width: 100%;
@@ -86,7 +86,7 @@ https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm
 
 
 .sign {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 15px;
   font-weight: 700;
   position: relative;
@@ -99,7 +99,7 @@ https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm
   text-decoration: none;
   display: block;
   padding: 15px 25px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 13px;
@@ -130,16 +130,17 @@ https://images.unsplash.com/46/Ov6ZY1zLTWmhPC0wFysP_IMG_2896_edt.jpg?fit=crop&fm
 }
 
 a {
+  color: blue green;
   font-family: "Nunito", sans-serif;
 }
 
 a:active {
-  color: black;
+  color: blue green;
   font-family: "Nunito", sans-serif;
 }
 
 a:visited {
-  color: black;
+  color: blue green;
   font-family: "Nunito", sans-serif;
 }
 
@@ -162,9 +163,7 @@ a:visited {
 #cssmenu ul li:last-child > a:after {
   display: none;
 }
-#cssmenu ul li.active a {
-  color: gold;
-}
+
 #cssmenu ul li.active a:before {
   width: 100%;
 }
@@ -259,9 +258,36 @@ h1.projectstitle {
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%;
+  height: 1200px;
+  background-image: url("bluebg.jpg")
 
 }
+
+
+.loginbackground {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1200px;
+  background-image: url("bluebg.jpg")
+
+}
+.activitypg {
+  /*background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("bluebg.jpg");*/
+  color: white;
+
+}
+.profshow1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 1200px;
+  background-image: url("bluebg.jpg")
+
+}
+
 
 .profilename12 {
   float: right

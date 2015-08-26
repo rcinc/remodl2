@@ -38,11 +38,12 @@ $yellow: #e3ea77;
 $blue: #7ca6de;
 
 body {
-font-family:'Raleway';
+font-family:'Nunito', sans-serif;
 }
 
 .wrapper {
 width:95%;
+
 }
 
 .header-container {
@@ -51,10 +52,12 @@ width:95%;
   background: black;
   background:rgb(0, 0, 0);
   border-bottom: solid 1px black;
+
 }
 
 .header {
   margin:0 auto;
+
 }
 
 .header h1 {
@@ -62,11 +65,13 @@ width:95%;
   margin:0;
   margin-left:.5em;
   padding-top:5px;
+
 }
 
 .blocks {
 // margin: 0 auto;
-margin-top: 20%
+margin-top: 20%;
+
 }
 
 .block {
@@ -84,7 +89,7 @@ margin-top: 20%
   box-shadow: 3px 3px 3px rgb(0, 0, 0);
   text-align: center;
   overflow:hidden;
-
+  border-radius: 5px;
   -webkit-backface-visibility: hidden;
   max-width: 20%;
   border:solid 2px #4bc970;
@@ -105,6 +110,8 @@ margin-top: 20%
   padding-bottom: 30px;
   border-bottom: solid 1px #4bc970;
   color: white;
+  border-radius: 2px;
+
 }
 
 .num {
@@ -115,34 +122,34 @@ padding-top: 40px;
 
 .green {
   font-family: 'Nunito', sans-serif;
-color: #4bc970;
+color: black;
 // background: #4bc970;
 }
 
 .orange {
 font-family: 'Nunito', sans-serif;
-color: #4bc970;
+color: black;
 }
 
 .purple {
 font-family: 'Nunito', sans-serif;
-color: #4bc970;
+color: black;
 }
 
 .yellow {
 font-family: 'Nunito', sans-serif;
-color: #4bc970;
+color: black;
 }
 
 .blue {
 font-family: 'Nunito', sans-serif;
-color:#4bc970;
+color: black;
 }
 .pp {
   margin-top: 5%;
-  margin-left: 42%;
-  width: 250px;
-  height: 250px;
+  margin-left: 40%;
+  width: 300px;
+  height: 300px;
   margin-bottom: -2%;
 }
 .pp img {

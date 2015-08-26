@@ -14,14 +14,15 @@
 }
 
 .title {
-  color: rgb(255,255,255);
-  font-size: 195px;
+  color: rgb(225,225,225);
+  font-size: 17rem;
   max-width: 100%;
   height: auto;
   text-align: center;
   margin-top: 8%;
-  text-shadow: 1px 1px 1px rgb(200,200,200);
+  text-shadow: 3px 2px 3px rgb(20,20,20);
   font-weight: bold;
+  font-family: "Mohave", sans-serif;
 }
 
 
@@ -58,7 +59,7 @@ strong.login:hover {
     overflow: hidden;
     position: relative;
     top: -92px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
     left: 100px;
     max-width: 100%;
 }
@@ -80,7 +81,7 @@ li .homeremodl {
   position: relative;
   top: -72px;
   left: 270px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
   max-width: 100%;
 }
 
@@ -150,7 +151,7 @@ figure {
 
 .pic-1 {
   opacity: 1;
-  background: url("http://www.zhcustomhomes.com/wp-content/uploads/2013/03/spanish-lake-house-front-courtyard-at-night.jpg") no-repeat center center;
+  background-image: url("/assets/pic5.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -163,7 +164,7 @@ figure {
   -o-animation-delay: 6s;
   -moz--animation-delay: 6s;
   -webkit-animation-delay: 6s;
-  background: url("http://thehomepicz.com/wp-content/uploads/2013/05/interior-design-of-a-dream-home-modern-luxury-.jpg") no-repeat center center;
+  background-image: url("/assets/pic3.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -175,7 +176,7 @@ figure {
   -o-animation-delay: 12s;
   -moz--animation-delay: 12s;
   -webkit-animation-delay: 12s;
-  background: url("http://designplans.biz/wp-content/uploads/of-luxury-modern-home-design-luxury-modern-home-white-architecture-20140625004513-53a9b929f2f3e.jpg") no-repeat center center;
+  background-image: url("/assets/pic4.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -187,7 +188,7 @@ figure {
   -o-animation-delay: 18s;
   -moz--animation-delay: 18s;
   -webkit-animation-delay: 18s;
-  background: url("http://sweethousedesign.com/wp-content/uploads/2015/08/spanish-style-homes-wiki.jpg") no-repeat center center;
+  background-image: url("/assets/pic2.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

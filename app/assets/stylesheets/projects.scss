@@ -127,7 +127,7 @@ statusBar styles
 -------------------------------*/
 .statusBar {
   // padding: 3px 10px;
-  background: #2fa2ad;
+  background: rgb(10,120,150);
   color: $COLOR_WHITE;
   box-shadow: 0 0 3px $COLOR_GRAY;
   /*position and z-index for box-shadow*/
@@ -298,15 +298,15 @@ footer styles
   float: right;
 }
 
-.projectpic:hover {
-  width: 1050px;
-  height: auto;
-}
+// .projectpic:hover {
+//   width: 1050px;
+//   height: auto;
+// }
 
 
 .flat{
   padding: 19px 9px 19px 9px;
-  color: #FFF;
+  color: white;
   background-color: #4bc970;
   font-size: 16px;
   text-align: center;
@@ -322,18 +322,20 @@ footer styles
 
 }
 
-.flat:hover{
-  box-shadow:0 0 0 3px #37F inset;
-  -webkit-transition:none;
+// .flat:hover{
+//   box-shadow:0 0 0 3px #37F;
+//   -webkit-transition:none;
+// }
+
+// .flat:active{
+//   // color:#EEE;
+//   background: #37F;
+// }
+
+img {
+  width: 150%;
 }
-
-.flat:active{
-  // color:#EEE;
-  background: #37F;
-}
-
-
-// .projectpic1:hover {
+// .projects:hover {
 //   width: 1050px;
 //   height: auto;
 // }
@@ -356,6 +358,10 @@ footer styles
 body {
   font-family: 'Nunito', sans-serif;
   color: #384047;
+}
+
+form#new_user.new_user {
+  margin-top: 40px;
 }
 
 form {
@@ -488,7 +494,7 @@ input[type="submit"] {
     -webkit-border-radius: 3;
     -moz-border-radius: 3;
     border-radius: 3px;
-    font-family: Arial;
+    font-family: 'Nunito',sans-serif;
     color: #ffffff;
     font-size: 11px;
     background: #333;
@@ -565,15 +571,20 @@ $color: #2194E0;
     transform: skewX(-45deg) translateX(0);
     transition: none;
   }
-  &:hover {
-    background-color: $color;
-    color: #fff;
-    border-bottom: 4px solid darken($color, 10%);
-    &:before {
-      transform: skewX(-45deg) translateX(13.5em);
-     transition: all 0.5s ease-in-out;
-    }
-  }
+  // &:hover {
+  //   background-color: $color;
+  //   color: #fff;
+  //   border-bottom: 4px solid darken($color, 10%);
+  //   &:before {
+  //     transform: skewX(-45deg) translateX(13.5em);
+  //    transition: all 0.5s ease-in-out;
+  //   }
+  // }
+}
+
+.projectpic img:hover {
+  width: 300px;
+  height: auto;
 }
 
 .profileshowcontainer {

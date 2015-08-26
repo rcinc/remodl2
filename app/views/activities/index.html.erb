@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
   </head>
-  <body>
+  <body class="activitypg">
 
     <div class="allholder">
 
@@ -17,7 +17,8 @@
 
       <div class="feed">  <!--1 Column Feed Item Holder-->
 
-        <h1 class="activities">Activities</h1>
+        <h1 class="activities">Activity</h1>
+
         <% if current_user && current_user.profile %>
           <% @activities.each do |activity| %>
               <div class="activity" style="margin-top: 10px;">

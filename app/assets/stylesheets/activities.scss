@@ -9,15 +9,11 @@
   margin: 0;
   box-sizing: border-box;
 }
-// 
-// html, body{
-//   font-family: 'Roboto', serif;
-// }
 
 h1{
-  font-family: 'Roboto', serif;
-  font-weight: 500;
-  font-size: 1em;
+  font-family: 'Mohave', sans-serif;
+  font-weight: 600;
+  font-size: 4rem;
 }
 
 #apptitle{
@@ -70,7 +66,7 @@ h1{
   opacity:.9;
 }
 .nav li{
-  font-family: 'Roboto', san-serif;
+  font-family: 'Mohave', san-serif;
   list-style-type: none;
   padding: 15px;
   margin-left: -40px;
@@ -379,7 +375,7 @@ input[type="submit"]{
   -webkit-border-radius: 3;
   -moz-border-radius: 3;
   border-radius: 3px;
-  font-family: Arial;
+  font-family: 'Nunito';
   color: #ffffff;
   font-size: 11px;
   background: #333;

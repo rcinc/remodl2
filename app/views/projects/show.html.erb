@@ -1,3 +1,4 @@
+
 <div class="profileshowcontainer">
 <p id="notice"><%= notice %></p>
 <div class="profileshowphoto">
@@ -323,6 +324,7 @@ Added on: <%= bid.created_at.strftime("%B %d, %Y") %><br>
 <b>Comment</b><br><%= comment.body %><br>
 </p>
 <% end %>
+
 <br>
 <br>
 
@@ -330,13 +332,9 @@ Added on: <%= bid.created_at.strftime("%B %d, %Y") %><br>
 <% if current_user && current_user.profile && current_user.profile.vendor? && @show_bid_form  %>
   <h3>Bid on this Project</h3>
   <%= form_for [@project, @bid] do |f| %>
-    <div class="field">
       <%= f.label :bid %><br>
       <%= f.number_field :bid %>
-    </div>
-    <div class="actions">
       <%= f.submit %>
-    </div>
   <% end %>
 <% end %>
 

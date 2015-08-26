@@ -10,7 +10,7 @@
 
 
     <% if current_user.profile.attachment.nil? %>
-      <%= image_tag "http://www.mathblogging.org/images/icons/default-avatar.jpg" %>
+      <%= image_tag "./default-avatar.png" %>
     <% else %>
       <%= image_tag current_user.profile.attachment.url%>
     <% end %>
@@ -74,7 +74,7 @@
           <% else %>
               <% current_user.bids.each do |bid| %>
               $<%= bid.bid %>
-              <%= link_to bid.project.title, bid.project %>
+              <%= link_to bid.project.title, bid.project %><br>
               <% end %>
           <% end%>
 

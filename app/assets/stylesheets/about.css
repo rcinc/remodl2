@@ -25,24 +25,19 @@
 .about {
   color: white;
   text-align: center;
-  font-size: 150px;
+  font-size: 12rem;
   text-shadow: 0 2px 2px rgba(100,100,100,0.8);
   max-width: 100%;
-  margin-top: -3%;
-  // text-emphasis:
-  // text-decoration: overline;
+  margin-top: 1%;
 
 }
 
 h2.aboutre {
   color: white;
   text-align: center;
-  font-size: 50px;
+  font-size: 2rem;
   text-shadow: 0 2px 2px rgba(100,100,100,0.8);
-  margin-top: 12%;
-  // text-emphasis:
-  // text-decoration: 3px solid underline;
-  // text-overflow:
+  margin-top: 7%;
 }
 
 hr {
@@ -194,4 +189,11 @@ body{
   0%{transform:scale(1)}
   50%{transform:scale(1.1)}
   100%{transform:scale(1)}
+}
+
+
+
+.cabout1 {
+  background-image: url("http://i946.photobucket.com/albums/ad303/pkellz6/f10b7b55-4c49-4940-9174-4c06e47185b8_zpsiqwrvlds.jpg");
+  height: 1000px;
 }
